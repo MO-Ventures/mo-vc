@@ -2,6 +2,7 @@ asgiref==3.4.1
 boto3==1.18.11
 botocore==1.21.11
 certifi==2021.5.30
+dj-database-url==0.5.0
 Django==3.2.5
 django-admin-sortable==2.2.4
 django-cleanup==5.2.0
