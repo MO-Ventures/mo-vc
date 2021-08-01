@@ -137,6 +137,8 @@ LOCALE_PATHS = [ BASE_DIR / 'locale' ]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATICFILES_DIRS = [ BASE_DIR / 'static' ]
+
 if not DEBUG:
     # AWS_ACCESS_KEY_ID = ''
     # AWS_SECRET_ACCESS_KEY = ''
@@ -156,7 +158,7 @@ if not DEBUG:
     MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_REGION}.amazonaws.com/media/'
 
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 else:
     STATIC_URL = '/staic/'
@@ -170,7 +172,6 @@ else:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [ BASE_DIR / 'static' ]
 
 if os.environ.get('Heroku', False) == 'True':
     import django_heroku

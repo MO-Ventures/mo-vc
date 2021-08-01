@@ -12,21 +12,21 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="MO VENTURES" />
     <meta property="og:description" content="MO Ventures Official Homepage" />
-    <meta property="og:image" content="{% static '/images/preview.jpg' %}"/>
+    <meta property="og:image" content="{% static 'images/preview.jpg' %}"/>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
     <!-- Libs CSS -->
-    <link rel="stylesheet" href="{% static '/css/libs.bundle.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/libs.bundle.css' %}" />
     <!-- Main CSS -->
-    <link rel="stylesheet" href="{% static '/css/index.bundle.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.bundle.css' %}" />
     <!-- Title -->
     <title>MO VENTURES</title>
   </head>
   <body class="{% block body-class %}{% endblock body-class %}">
     <nav id="mainNav" class="navbar navbar-expand-lg navbar-sticky navbar-dark">
       <div class="container">
-        <a href="/" class="navbar-brand"><img src="{% static '/images/logo/logo-light.svg' %}" alt="Logo"></a>
+        <a href="/" class="navbar-brand"><img src="{% static 'images/logo/logo-light.svg' %}" alt="Logo"></a>
         <!-- secondary -->
         <ul class="navbar-nav navbar-nav-secondary order-lg-3">
           <li class="nav-item d-lg-none">
@@ -100,6 +100,6 @@
     {% include 'footer.html' %}
 
     <!-- javascript -->
-    <script src="{% static '/js/vendor.bundle.js' %}"></script>
-    <script src="{% static '/js/index.bundle.js' %}"></script>
+    <script src="{% static 'js/vendor.bundle.js' %}"></script>
+    <script src="{% static 'js/index.bundle.js' %}"></script>
 </html>
