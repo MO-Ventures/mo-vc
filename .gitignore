@@ -132,7 +132,7 @@ dmypy.json
 **/migrations
 staticfiles
 media
-secrets.json
+secrets.py
 
 # Unfinished
 join
