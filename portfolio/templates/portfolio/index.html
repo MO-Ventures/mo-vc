@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block body %}
+<div class="offcanvas-wrap">
+<section class="py-15 py-xl-20 overflow-hidden bg-black inverted">
+  <div class="container">
+    <div class="row align-items-end mb-10 mt-5">
+      <div class="col-lg-8">
+        <h1>{% trans "Passion Combined With Experience." %}</h1>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- features -->
+<section class="py-15 py-xl-20">
+  <div class="container">
+  <div class="row mb-8">
+    <div class="col-lg-10">
+      <h2>{% blocktrans %}
+        We invest in the following:
+        {% endblocktrans %}
+      </h2>
+    </div>
+  </div>
+  <div class="accordion" id="accordion-1">
+  {% for i in investment %}
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading-1-{{ forloop.counter }}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapse-1-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-1-{{ forloop.counter }}">
+          {{ i.name }}
+        </button>
+      </h2>
+      <div id="collapse-1-{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="heading-1-{{ forloop.counter }}"
+        data-bs-parent="#accordion-1">
+        <div class="accordion-body">
+          <p class="text-secondary">
+          {{ i.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+<!-- demo -->
+<section id="demo" class="py-15 py-xl-20 bg-light">
+  <div class="container">
+  <div class="row justify-content-center mb-10">
+    <div class="col-lg-10 col-xl-10 text-center">
+      <h2 class="display-2 fw-light">
+        {% blocktrans %}
+        Our Valued <span class="fw-bold">Partners
+        {% endblocktrans %}
+        </span>
+      </h2>
+      <button class="btn btn-filter rounded-pill mb-2 current" data-filter="*" data-target="#grid1">{% trans "all" %}</button>
+      <button class="btn btn-filter rounded-pill mb-2" data-filter=".America" data-target="#grid1">{% trans "America" %}</button>
+      <button class="btn btn-filter rounded-pill mb-2" data-filter=".Asia" data-target="#grid1">{% trans "Asia" %}</button>
+      <button class="btn btn-filter rounded-pill mb-2" data-filter=".Europe" data-target="#grid1">{% trans "Europe" %}</button>
+    </div>
+  </div>
+  <div class="row g-3 g-xl-5" id="grid1" data-aos="fade-up" data-isotope>
+    {% for company in object_list %}
+    <div class="col-6 col-lg-4 {{ company.sector }}">
+      <article class="card card-hover-image-rise">
+        <a href="{{ company.url }}" target="_blank" title="{{ company.name }}">
+        <img src="{{ company.image.url }}" class="card-img-top shadow-sm" alt="{{ company.name }}">
+        </a>
+        <a href="{{ company.url }}" class="card-title text-center mt-1">
+          <h4 class="fw-normal fs-6">{{ company.name }}</h4>
+        </a>
+      </article>
+    </div>
+    {% endfor %}
+</section>
+<!-- offer -->
+<section class="py-15 py-xl-20">
+  <div class="container">
+    <div class="row mb-10">
+      <div class="col-lg-10">
+        <span class="eyebrow text-primary mb-4">{% trans "Numbers" %}</span>
+        <h3 class="fs-4">
+        {% blocktrans %}
+          Here's Recap
+          {% endblocktrans %}
+        </h3>
+      </div>
+    </div>
+    <div class="row">
+      {% if stat.show_people %}
+      <div class="col">
+        <span class="d-block display-3 fw-bold">{{ stat.people }}</span>
+        <span class="lead text-secondary">{% trans "People" %}</span>
+      </div>
+      {% endif %}
+      {% if stat.show_raised %}
+      <div class="col">
+        <span class="d-block display-3 fw-bold">{{ stat.raised }}</span>
+        <span class="lead text-secondary">{% trans "Raised<br/>(in billion)" %}</span>
+      </div>
+      {% endif %}
+      {% if stat.show_funds %}
+      <div class="col">
+        <span class="d-block display-3 fw-bold">{{ stat.funds }}</span>
+        <span class="lead text-secondary">{% trans "Funds" %}</span>
+      </div>
+      {% endif %}
+      <div class="col">
+        <span class="d-block display-3 fw-bold">2020</span>
+        <span class="lead text-secondary">{% trans "Established in" %}</span>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}

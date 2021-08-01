@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: join/templates/join/job-apply.html:26
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-01 19:07+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: join/templates/join/index.html:10
+msgid "The journey would not have been possibile without our people"
+msgstr ""
+
+#: join/templates/join/index.html:20
+msgid ""
+"\n"
+"        Join journey as\n"
+"        "
+msgstr ""
+
+#: join/templates/join/index.html:30
+msgid ""
+"\n"
+"                <span class=\"fw-bold\">\n"
+"                People\n"
+"                </span>\n"
+"                "
+msgstr ""
+
+#: join/templates/join/index.html:43
+msgid ""
+"\n"
+"                <span class=\"fw-bold\">\n"
+"                Partner\n"
+"                </span>\n"
+"                "
+msgstr ""
+
+#: join/templates/join/job-apply.html:9
+msgid "Application"
+msgstr ""
+
+#: join/templates/join/job-apply.html:25
+msgid "Name"
+msgstr ""
+
+#: join/templates/join/job-apply.html:29
+msgid "Job"
+msgstr ""
+
+#: join/templates/join/job-apply.html:40
+msgid "Resume"
+msgstr ""
+
+#: join/templates/join/job-list.html:29
+msgid ""
+"\n"
+"              We are <span class=\"fw-bold\">hiring</span> now\n"
+"            "
+msgstr ""
+
+#: join/templates/join/job-list.html:33
+msgid ""
+"\n"
+"            We are not <span class=\"fw-bold\">hiring</span> at the moment\n"
+"            "
+msgstr ""
+
+#: join/templates/join/job-list.html:41
+msgid "Management"
+msgstr ""
+
+#: join/templates/join/job-post.html:10
+msgid "We're hiring"
+msgstr ""
+
+#: join/templates/join/job-post.html:33
+msgid "Location"
+msgstr ""
+
+#: join/templates/join/job-post.html:40
+#: portfolio/templates/portfolio/index.html:94 templates/base.html:70
+msgid "People"
+msgstr ""
+
+#: join/templates/join/job-post.html:47 templates/base.html:82
+msgid "Experience"
+msgstr ""
+
+#: join/templates/join/job-post.html:48
+#, python-format
+msgid ""
+"\n"
+"                    %(experience)s+ years\n"
+"                    "
+msgstr ""
+
+#: join/templates/join/job-post.html:56
+msgid "Expiration Date"
+msgstr ""
+
+#: join/templates/join/job-post.html:64
+msgid "Apply"
+msgstr ""
+
+#: portfolio/templates/portfolio/index.html:10
+msgid "Passion Combined With Experience."
+msgstr ""
+
+#: portfolio/templates/portfolio/index.html:20
+msgid ""
+"\n"
+"        We invest in the following:\n"
+"        "
+msgstr ""
+
+#: portfolio/templates/portfolio/index.html:52
+msgid ""
+"\n"
+"        Our Valued <span class=\"fw-bold\">Partners\n"
+"        "
+msgstr ""
+
+#: portfolio/templates/portfolio/index.html:57
+msgid "all"
+msgstr ""
+
+#: portfolio/templates/portfolio/index.html:58
+msgid "America"
+msgstr ""
+
+#: portfolio/templates/portfolio/index.html:59
+msgid "Asia"
+msgstr ""
+
+#: portfolio/templates/portfolio/index.html:60
+msgid "Europe"
+msgstr ""
+
+#: portfolio/templates/portfolio/index.html:82
+msgid "Numbers"
+msgstr ""
+
+#: portfolio/templates/portfolio/index.html:84
+msgid ""
+"\n"
+"          Here's Recap\n"
+"          "
+msgstr ""
+
+#: portfolio/templates/portfolio/index.html:100
+msgid "Raised<br/>(in billion)"
+msgstr ""
+
+#: portfolio/templates/portfolio/index.html:106
+msgid "Funds"
+msgstr ""
+
+#: portfolio/templates/portfolio/index.html:111
+msgid "Established in"
+msgstr ""
+
+#: portfolio/views.py:17
+msgid "Transparency"
+msgstr ""
+
+#: portfolio/views.py:18 portfolio/views.py:22 portfolio/views.py:26
+#: portfolio/views.py:30 portfolio/views.py:34
+msgid "We value"
+msgstr ""
+
+#: portfolio/views.py:21
+msgid "Founder"
+msgstr ""
+
+#: portfolio/views.py:25
+msgid "Responsiblity"
+msgstr ""
+
+#: portfolio/views.py:29
+msgid "Sustainable"
+msgstr ""
+
+#: portfolio/views.py:33
+msgid "Profitable"
+msgstr ""
+
+#: templates/base.html:64
+msgid "About"
+msgstr "정보"
+
+#: templates/base.html:76
+msgid "Portfolio"
+msgstr "포트폴리오"
+
+#: templates/footer.html:8
+msgid ""
+"\n"
+"        <h6>115, Gamcheonhang-ro 405beon-gil, Saha-gu, Busan, Republic of "
+"Korea</h6>\n"
+"        "
+msgstr ""
+
+#: templates/footer.html:14
+msgid ""
+"\n"
+"        <h6>49, Gangnam-daero 37-gil, Seocho-gu, Seoul, Republic of Korea</"
+"h5>\n"
+"        <h6>Athenaeum Bulding 6fl</h6>\n"
+"        "
+msgstr ""
+
+#: templates/footer.html:29
+msgid "MO Ventures Co., Ltd."
+msgstr "엠오벤처스 주식회사"
+
+#: templates/footer.html:32
+msgid "Contact Us"
+msgstr ""

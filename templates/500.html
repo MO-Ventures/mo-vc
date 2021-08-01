@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body-class %}
+bg-red headroom--top headroom--bottom
+{% endblock body-class %}
+
+{% block body %}
+<section class="inverted">
+  <div class="d-flex flex-column container min-vh-100 py-20">
+    <div class="row align-items-center justify-content-center justify-content-lg-between my-auto">
+      <div class="col-lg-6 order-lg-2">
+        <img class="img-fluid" src="{% static '/images/svg/bug-fill.png' %}" alt="Figure">
+      </div>
+      <div class="col-md-8 col-lg-5 order-lg-1 text-center text-lg-start">
+        <h1 class="display-2">{% trans 'Server Error' %}</h1>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}

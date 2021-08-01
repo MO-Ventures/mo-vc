@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+<div class="offcanvas-wrap">
+
+
+<section class="bg-black inverted overflow-hidden">
+    <div class="container py-20 d-flex flex-column min-vh-100 foreground">
+    <div class="row my-auto justify-content-center">
+        <div class="col-lg-6 text-center" data-center-center="transform: translateY(0%);"
+        data-top-bottom="transform: translateY(10%);">
+        <span class="badge bg-opaque-red rounded-pill text-red mb-4">None</span>
+        <h1 class="display-1 text-shadow">엠오벤처스는<br/> 
+        <span data-typed='{"strings": ["같이 갑니다", "같이 큽니다", "포기하지 않습니다"]}'></span></h1>
+        </div>
+    </div>
+    </div>
+    <div class="background background-overlay">
+        <video data-video playsinline autoplay muted loop>
+            <source src="{% static '/video/video-2.mp4' %}" type="video/mp4" />
+        </video>
+    </div>
+    <span class="scroll-down"></span>
+</section>
+
+
+<!-- features -->
+<section class="py-15 py-xl-20">
+    <div class="container">
+    <div class="row mb-8">
+        <div class="col-lg-10">
+        <h2>Cube is packed with <span class="d-lg-block">features you' ll love.</span>
+        </h2>
+        </div>
+    </div>
+    <div class="row g-1 g-lg-3">
+        <div class="col-auto">
+        <div class="d-flex align-items-center border rounded-pill pe-4">
+            <img src="./assets/images/logo/bootstrap.svg" class="me-3" alt="Bootstrap">
+            Built on Bootstrap 5
+        </div>
+        </div>
+        <div class="col-auto">
+        <div class="d-flex align-items-center border rounded-pill pe-4">
+            <img src="./assets/images/logo/js.svg" class="me-3" alt="Javascript">
+            Vanilla Javascript
+        </div>
+        </div>
+        <div class="col-auto">
+        <div class="d-flex align-items-center border rounded-pill pe-4">
+            <img src="./assets/images/logo/webpack.svg" class="me-3" alt="Webpack">
+            Webpack Setup
+        </div>
+        </div>
+        <div class="col-auto">
+        <div class="d-flex align-items-center border rounded-pill pe-4">
+            <img src="./assets/images/logo/w3c.svg" class="me-3" alt="W3C">
+            W3C Valid HTML Code
+        </div>
+        </div>
+        <div class="col-auto">
+        <div class="d-flex align-items-center border rounded-pill pe-4">
+            <img src="./assets/images/logo/sass.svg" class="me-3" alt="Saas">
+            Easy Customisable with SASS
+        </div>
+        </div>
+        <div class="col-auto">
+        <div class="d-flex align-items-center border rounded-pill pe-4">
+            <img src="./assets/images/logo/seo.svg" class="me-3" alt="Seo"> SEO Friendly Code
+        </div>
+        </div>
+        <div class="col-auto">
+        <div class="d-flex align-items-center border rounded-pill pe-4">
+            <img src="./assets/images/logo/documentation.svg" class="me-3" alt="Documentation"> Detailed Documentation
+        </div>
+        </div>
+        <div class="col-auto">
+        <div class="d-flex align-items-center border rounded-pill pe-4">
+            <img src="./assets/images/logo/responsive.svg" class="me-3" alt="Documentation"> Fully Responsive
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+
+<!-- offer -->
+<section class="py-15 py-xl-20 overflow-hidden border-top">
+    <div class="container">
+    <div class="row justify-content-between align-items-center gutter-3 gutter-lg-5">
+        <div class="col-lg-5">
+        <div class="row mb-6">
+            <div class="col">
+            <h2><a href="https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/"
+                class="text-primary underline">Buy now</a> and get one new
+                demo every month.</h2>
+            <div class="mt-5">
+                <span class="eyebrow mb-2 text-muted">Next Demo will be realeased in:</span>
+                <div class="countdown" data-countdown="Jul 25, 2021 21:00:00"></div>
+            </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-6">
+        <div class="position-relative">
+            <img class="img-fluid shadow-lg level-1" src="./assets/images/pages/shop.jpg" alt="Image"
+            data-aos="fade-up" data-aos-delay="800">
+            <img class="img-fluid shadow-lg position-absolute level-2 start-10 top-20"
+            src="./assets/images/pages/about.jpg" alt="Image" data-aos="fade-up" data-aos-delay="400">
+            <img class="img-fluid shadow-lg position-absolute level-3 start-20 bottom-20"
+            src="./assets/images/pages/services.jpg" alt="Image" data-aos="fade-up">
+        </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+
+<section class="py-15 py-xl-20">
+      <div class="container">
+        <div class="row g-4 g-xl-6">
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+            <a href="" class="card h-100 border card-arrow">
+              <div class="card-body">
+                <h4 class="card-title fw-light fs-4"><span class="fw-bold">엠오벤처스</span>와 함께 일하고 싶어요</h4>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            <a href="" class="card card-arrow bg-primary inverted overflow-hidden">
+              <div class="card-body">
+                <h4 class="card-title fw-light fs-4"><span class="fw-bold">투자</span>를 받고 싶어요</h4>
+              </div>
+              <img class="position-absolute top-50 start-50 translate-middle level-3" src="{% static '/images/svg/dialog.svg' %}" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+{% endblock body %}

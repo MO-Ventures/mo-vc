@@ -1,0 +1,37 @@
+{% load static %}
+{% load i18n %}
+<footer id="footer" class="py-10 py-xl-15 bg-black inverted border-top">
+  <div class="container">
+    <div class="row g-2 g-lg-6 mb-8">
+      <div class="col-lg-6">
+        <span class="text-red">Headquarter</span>
+        {% blocktrans %}
+        <h6>115, Gamcheonhang-ro 405beon-gil, Saha-gu, Busan, Republic of Korea</h6>
+        {% endblocktrans %}
+      </div>
+      <div class="col-lg-6" text-lg-end>
+        <span class="text-red">Seoul Office</span>
+        {% blocktrans %}
+        <h6>49, Gangnam-daero 37-gil, Seocho-gu, Seoul, Republic of Korea</h5>
+        <h6>Athenaeum Bulding 6fl</h6>
+        {% endblocktrans %}
+      </div>
+    </div>
+    <div class="row mb-8">
+      <div class="col">
+        <hr>
+      </div>
+    </div>
+    <div class="row align-items-center text-muted">
+      <div class="col-6 col-lg-4 text-lg-center order-lg-2"><a href="/" class="navbar-brand"><img
+        src="{% static '/images/logo/logo-light.svg' %}" alt="Logo"></a></div>
+      <div class="col-6 col-lg-4 order-lg-1">
+        <p class="eyebrow">{% now 'Y' %} &copy; {% trans "MO Ventures Co., Ltd." %}</p>
+      </div>
+      <div class="col-lg-4 text-center text-lg-end order-lg-3">
+        <a href="" class="action eyebrow underline text-white">{% trans "Contact Us" %}<i class="bi bi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block body %}
+<div class="offcanvas-wrap">
+<section class="bg-black inverted overflow-hidden">
+  <div class="container py-20 d-flex flex-column min-vh-100 foreground">
+    <div class="row my-auto justify-content-center">
+      <div class="col-lg-6 text-center" data-center-center="transform: translateY(0%);"
+        data-top-bottom="transform: translateY(10%);">
+        <span class="badge bg-opaque-red rounded-pill text-red mb-4">{{ subheader }}</span>
+        <h1 class="display-1 text-shadow">엠오벤처스는<br/> 
+          <span>TEST</span>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <div class="background background-overlay">
+    <video src="{% static '/video/video-2.mp4' %}" data-video controls autoplay muted loop playsinline>
+    </video>
+  </div>
+  <span class="scroll-down"></span>
+</section>
+<section class="py-15 py-xl-20 bg-light overflow-hidden">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-8">
+        <h2>{% trans "Our People" %}</h2>
+      </div>
+    </div>
+    <div class="mb-5 col-12">
+      <button class="btn btn-filter rounded-pill current" data-filter="*" data-target="#grid1">all</button>
+      {% for s in sector %}
+      <button class="btn btn-filter rounded-pill m-1" data-filter=".{{ s }}" data-target="#grid1">{{ s }}</button>
+      {% endfor %}
+    </div>
+    <div class="row g-3 g-xl-5" id="grid1" data-isotope>
+    {% for people in object_list %}
+      <div class="col-6 col-md-4 col-lg-3 {{ people.sector }}" data-bs-toggle="modal" data-bs-target="#peopleModal-{{ forloop.counter }}" style="cursor: pointer;">
+        <div class="card">
+          <div class="equal-1-1 mb-2 card-hover-border">
+            <figure class="background" style="background-image: url({{ people.photo.url }})">
+            </figure>
+          </div>
+          <h4 class="card-title">{{ people.name }}</h4>
+          <span class="text-secondary">{{ people.position }}</span>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+  <style>
+  @media (min-width:992px) {
+    .modal-content {
+      height: 70vh;
+    }
+    #profile_pics {
+      padding: 1rem !important;
+    }
+    #modalLabel {
+      padding-top: 2rem !important;
+    }
+  }
+  </style>
+  {% for people in object_list %}
+  <div class="modal fade" id="peopleModal-{{ forloop.counter }}" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-xl modal-dialog modal-dialog-centered modal-fullscreen-lg-down" id="modal-frame">
+      <div class="modal-content">
+        <button type="button" class="bi bi-x modal-close btn-close text-black" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+        <div class="row h-100 modal-body ">
+          <div class="h-100 col-lg-6 d-flex align-items-center justify-content-center">
+            <img id="profile_pics" class="w-auto h-auto mw-100 mh-100 img-fluid" src="{{ people.photo.url }}">
+          </div>
+          <div class="h-100 col-lg-6 overflow-auto">
+            <h3 id="modalLabel">{{ people.name }}</h3>
+            <p id="modalDescription">
+            {{ people.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}
