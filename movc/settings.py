@@ -11,25 +11,21 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-import json
 from pathlib import Path
-from secrets import *
+from movc.secrets import *
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-with open(BASE_DIR / 'movc' / 'secrets.json') as f:
-    SECRETS = json.load(f)
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRETS['SECRET_KEY']
+# SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', False)
+DEBUG = os.environ.get('DEBUG', False) == 'True'
 
 ALLOWED_HOSTS = ['*']
 
@@ -142,12 +138,12 @@ LOCALE_PATHS = [ BASE_DIR / 'locale' ]
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 if not DEBUG:
-    AWS_ACCESS_KEY_ID = SECRETS['AWS_ACCESS_KEY_ID']
-    AWS_SECRET_ACCESS_KEY = SECRETS['AWS_SECRET_ACCESS_KEY']
+    # AWS_ACCESS_KEY_ID = ''
+    # AWS_SECRET_ACCESS_KEY = ''
 
-    AWS_STORAGE_BUCKET_NAME = SECRETS['AWS_STORAGE_BUCKET_NAME']
-    AWS_REGION = SECRETS['AWS_REGION']
-    AWS_S3_CUSTOM_DOMAIN = SECRETS['AWS_S3_CUSTOM_DOMAIN']
+    # AWS_STORAGE_BUCKET_NAME = ''
+    # AWS_REGION = ''
+    # AWS_S3_CUSTOM_DOMAIN = ''
     AWS_S3_OBJECT_PARAMETERS = {
         'CacheControl': 'max-age=86400',
     }
@@ -174,7 +170,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [ BASE_DIR / 'static' ]
 
-if os.environ.get('Heroku', False):
+if os.environ.get('Heroku', False) == 'True':
     import django_heroku
     import dj_database_url
     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
