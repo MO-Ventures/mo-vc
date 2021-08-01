@@ -144,14 +144,16 @@ if not DEBUG:
     # AWS_STORAGE_BUCKET_NAME = ''
     # AWS_REGION = ''
     # AWS_S3_CUSTOM_DOMAIN = ''
+    AWS_LOCATION = 'static'
+    AWS_DEFAULT_ACL = 'public-read'
     AWS_S3_OBJECT_PARAMETERS = {
         'CacheControl': 'max-age=86400',
     }
 
     STATIC_ROOT = '/static/'
-    STATIC_URL = f'//{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_REGION}.amazonaws.com/static/'
+    STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_REGION}.amazonaws.com/static/'
     MEDIA_ROOT = '/media/'
-    MEDIA_URL = f'//{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_REGION}.amazonaws.com/media/'
+    MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_REGION}.amazonaws.com/media/'
 
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
