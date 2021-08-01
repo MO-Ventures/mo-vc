@@ -136,3 +136,6 @@ secrets.json
 
 # Unfinished
 join
+
+# Mac
+.DS_Store
