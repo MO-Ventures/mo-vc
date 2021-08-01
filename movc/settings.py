@@ -158,7 +158,7 @@ if not DEBUG:
     MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_REGION}.amazonaws.com/media/'
 
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
 
 else:
     STATIC_URL = '/staic/'
@@ -174,7 +174,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 if os.environ.get('Heroku', False) == 'True':
-    import django_heroku
+    # import django_heroku
     import dj_database_url
     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-    django_heroku.settings(locals())
+    # django_heroku.settings(locals())
