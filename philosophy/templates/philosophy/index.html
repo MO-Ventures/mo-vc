@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block body %}
+<section class="py-15 py-xl-20">
+  <div class="container">
+  <div class="row mb-8">
+    <div class="col-lg-10">
+      <h2>{% blocktrans %}
+        We invest in the following:
+        {% endblocktrans %}
+      </h2>
+    </div>
+  </div>
+  <div class="accordion" id="accordion-1">
+  {% for i in investment %}
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="heading-1-{{ forloop.counter }}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapse-1-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-1-{{ forloop.counter }}">
+          {{ i.name }}
+        </button>
+      </h2>
+      <div id="collapse-1-{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="heading-1-{{ forloop.counter }}"
+        data-bs-parent="#accordion-1">
+        <div class="accordion-body">
+          <p class="text-secondary">
+          {{ i.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</section>
+{% endblock body %}
