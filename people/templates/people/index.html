@@ -75,7 +75,9 @@
           <div class="h-100 col-lg-6 overflow-auto">
             <h3 id="modalLabel">{{ people.name }}</h3>
             <p id="modalDescription">
-            {{ people.description|escape }}
+            {% autoescape off %}
+            {{ people.description }}
+            {% endautoescape %}
             </p>
           </div>
         </div>
