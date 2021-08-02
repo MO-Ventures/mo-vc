@@ -39,18 +39,18 @@
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                 {% if LANGUAGE == "en" %}
-                  <span class="text-white">English</span>
+                  <span class="{{ navbar|default:"text-white"}}">English</span>
                 {% else %}
-                  <a href="{{ request.get_full_path|slice:'3:' }}" class="text-white">
+                  <a href="{{ request.get_full_path|slice:'3:' }}" class="{{ navbar|default:"text-white"}}">
                     English
                   </a>
                 {% endif %}
                 </li>
                 <li class="breadcrumb-item">
                 {% if LANGUAGE == "ko" %}
-                  <span class="text-white">한국어</span>
+                  <span class="{{ navbar|default:"text-white"}}">한국어</span>
                 {% else %}
-                  <a href="/ko{{ request.get_full_path }}" class="text-white">
+                  <a href="/ko{{ request.get_full_path }}" class="{{ navbar|default:"text-white"}}">
                     한국어
                   </a>
                 {% endif %}
@@ -62,50 +62,15 @@
         <!-- primary -->
         <div class="collapse navbar-collapse" id="navbar" data-bs-parent="#mainNav">
           <ul class="navbar-nav">
+          {% for _ in 1234|make_list %}
             <li class="nav-item">
-              {% if LANGUAGE == "en" %}
-              <a class="nav-link" href="/philosophy" id="" role="button" data-bs-toggle=""
-                aria-expanded="false">
-              {% else %}
-              <a class="nav-link" href="/ko/philosophy" id="" role="button" data-bs-toggle=""
-                aria-expanded="false">
-              {% endif %}
-              {% trans 'Philosophy' %}
+              <a class="nav-link {{ navbar|default:"text-white" }}" 
+              href="/{% if LANGUAGE == "ko" %}ko/{% endif %}{% cycle 'philosophy' 'people' 'portfolio' 'experience' as page%}" 
+              id="" role="button" data-bs-toggle="" aria-expanded="false">
+              {% trans page|title %}
               </a>
             </li>
-            <li class="nav-item">
-              {% if LANGUAGE == "en" %}
-              <a class="nav-link" href="/people" id="" role="button" data-bs-toggle=""
-                aria-expanded="false">
-              {% else %}
-              <a class="nav-link" href="/ko/people" id="" role="button" data-bs-toggle=""
-                aria-expanded="false">
-              {% endif %}
-              {% trans "People" %}
-              </a>
-            </li>
-            <li class="nav-item">
-              {% if LANGUAGE == "en" %}
-              <a class="nav-link" href="/portfolio" id="" role="button" data-bs-toggle=""
-                aria-expanded="false">
-              {% else %}
-              <a class="nav-link" href="/ko/portfolio" id="" role="button" data-bs-toggle=""
-                aria-expanded="false">
-              {% endif %}
-              {% trans "Portfolio" %}
-              </a>
-            </li>
-            <li class="nav-item">
-              {% if LANGUAGE == "en" %}
-              <a class="nav-link disabled" href="/experience" id="" role="button" data-bs-toggle=""
-                aria-expanded="false">
-              {% else %}
-              <a class="nav-link disabled" href="/ko/experience" id="" role="button" data-bs-toggle=""
-                aria-expanded="false">
-              {% endif %}
-              {% trans "Experience" %}
-              </a>
-            </li>
+          {% endfor %}
           </ul>
         </div>
         <!-- mobile user menu -->
