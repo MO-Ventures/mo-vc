@@ -36,6 +36,3 @@ class Statistics(models.Model):
 
     def __str__(self):
         return "Statistics"
-
-class Description(models.Model):
-    pass
