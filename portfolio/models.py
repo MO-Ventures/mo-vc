@@ -1,6 +1,6 @@
 from django.db import models
 
-class Sector(models.TextChoices):
+class Region(models.TextChoices):
     America = 'America', 'America'
     Asia = 'Asia', 'Asia'
     Europe = 'Europe', 'Europe'
@@ -8,7 +8,7 @@ class Sector(models.TextChoices):
 # Create your models here.
 class Company(models.Model):
     name = models.CharField(max_length=20)
-    sector = models.CharField(max_length=30, choices=Sector.choices, default=Sector.Asia)
+    region = models.CharField(max_length=30, choices=Region.choices, default=Region.Asia)
     url = models.URLField(max_length=30)
     image = models.ImageField(upload_to="company")
 
