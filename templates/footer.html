@@ -1,5 +1,6 @@
 {% load static %}
 {% load i18n %}
+{% get_current_language as LANGUAGE %}
 <footer id="footer" class="py-10 py-xl-15 bg-black inverted border-top">
   <div class="container">
     <div class="row g-2 g-lg-6 mb-8">
@@ -29,7 +30,7 @@
         <p class="eyebrow">{% now 'Y' %} &copy; {% trans "MO Ventures Co., Ltd." %}</p>
       </div>
       <div class="col-lg-4 text-center text-lg-end order-lg-3">
-        <a href="" class="action eyebrow underline text-white">{% trans "Contact Us" %}<i class="bi bi-arrow-right"></i></a>
+        <a href="/{% if LANGUAGE == "ko" %}ko/{% endif %}contact" class="action eyebrow underline text-white">{% trans "Contact Us" %}<i class="bi bi-arrow-right"></i></a>
       </div>
     </div>
   </div>
