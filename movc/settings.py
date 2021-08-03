@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     'philosophy',
     'people',
     'portfolio',
+    'contact',
+    'maintenance'
     # 'join',
 ]
 
