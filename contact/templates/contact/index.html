@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block body-class %}
+bg-light
+{% endblock body-class %}
+{% block body %}
+<section class="py-15 py-xl-20">
+  <div class="container mt-5 mt-lg-10">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h1>{% trans "Contact" %}</h1>
+        </p>
+        <hr class="my-4 fw-25 ml-0">
+        <ul class="list-group list-group-minimal">
+          <li class="list-group-item d-flex align-items-center">
+            <span class="w-25 text-muted">{% trans "Email" %}</span>
+            <a href="mailto:info@mo-vc.com">info@mo-vc.com</a>
+          </li>
+          <li class="list-group-item d-flex align-items-center">
+            <span class="w-25 text-muted">{% trans "Phone" %}</span>
+            <a href="tel:+822-3487-3696">+82-2-3487-3696</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-5">
+        <div class="media equal-1-1">
+          <div id="map1" class="map"></div>
+        </div>
+        <div class="card bg-black text-white">
+          <div class="card-body">
+            <h5>{% trans "Seoul Office" %}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- contact -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey={{ kakao_api_key }}&libraries=clusterer"></script>
+<script>
+  var container = document.getElementById('map1');
+  var options = {
+  	center: new kakao.maps.LatLng(37.48466421759677, 127.0308615012342),
+  	level: 2
+  };
+  
+  var map = new kakao.maps.Map(container, options);
+  var marker = new kakao.maps.Marker({
+      map: map,
+      position: new kakao.maps.LatLng(37.48466421759677, 127.0308615012342)
+  })
+</script>
+{% endblock body %}
