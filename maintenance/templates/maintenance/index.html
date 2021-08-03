@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE %}
+{% block body %}
+<div class="offcanvas-wrap">
+  <section class="overflow-hidden inverted bg-black">
+    <div class="d-flex flex-column min-vh-100 container py-10 level-1">
+      <div class="row justify-content-center my-auto">
+        <div class="col-lg-8 col-xl-6 text-center">
+        {% blocktrans %}
+          <h1 class="display-5 lh-sm">This page is under maintenance :(</h1>
+        {% endblocktrans %}
+        </div>
+      </div>
+    </div>
+    <div class="background background-overlay" data-aos="zoom-out" data-aos-delay="200">
+      <video data-video playsinline autoplay muted loop>
+        <source src="{% static 'video/video-1.mp4' %}" type="video/mp4" />
+      </video>
+    </div>
+  </section>
+</div>
+{% endblock body %}
+
