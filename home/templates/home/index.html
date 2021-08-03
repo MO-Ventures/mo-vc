@@ -1,143 +1,149 @@
 {% extends "base.html" %}
 {% load static %}
-
+{% load i18n %}
+{% get_current_language as LANGUAGE %}
 {% block body %}
 <div class="offcanvas-wrap">
-
-
-<section class="bg-black inverted overflow-hidden">
-    <div class="container py-20 d-flex flex-column min-vh-100 foreground">
-    <div class="row my-auto justify-content-center">
-        <div class="col-lg-6 text-center" data-center-center="transform: translateY(0%);"
-        data-top-bottom="transform: translateY(10%);">
-        <span class="badge bg-opaque-red rounded-pill text-red mb-4">None</span>
-        <h1 class="display-1 text-shadow">엠오벤처스는<br/> 
-        <span data-typed='{"strings": ["같이 갑니다", "같이 큽니다", "포기하지 않습니다"]}'></span></h1>
-        </div>
-    </div>
-    </div>
-    <div class="background background-overlay">
-        <video data-video playsinline autoplay muted loop>
-            <source src="{% static 'video/video-2.mp4' %}" type="video/mp4" />
-        </video>
-    </div>
-    <span class="scroll-down"></span>
-</section>
-
-
-<!-- features -->
-<section class="py-15 py-xl-20">
-    <div class="container">
-    <div class="row mb-8">
-        <div class="col-lg-10">
-        <h2>Cube is packed with <span class="d-lg-block">features you' ll love.</span>
-        </h2>
-        </div>
-    </div>
-    <div class="row g-1 g-lg-3">
-        <div class="col-auto">
-        <div class="d-flex align-items-center border rounded-pill pe-4">
-            <img src="./assets/images/logo/bootstrap.svg" class="me-3" alt="Bootstrap">
-            Built on Bootstrap 5
-        </div>
-        </div>
-        <div class="col-auto">
-        <div class="d-flex align-items-center border rounded-pill pe-4">
-            <img src="./assets/images/logo/js.svg" class="me-3" alt="Javascript">
-            Vanilla Javascript
-        </div>
-        </div>
-        <div class="col-auto">
-        <div class="d-flex align-items-center border rounded-pill pe-4">
-            <img src="./assets/images/logo/webpack.svg" class="me-3" alt="Webpack">
-            Webpack Setup
-        </div>
-        </div>
-        <div class="col-auto">
-        <div class="d-flex align-items-center border rounded-pill pe-4">
-            <img src="./assets/images/logo/w3c.svg" class="me-3" alt="W3C">
-            W3C Valid HTML Code
-        </div>
-        </div>
-        <div class="col-auto">
-        <div class="d-flex align-items-center border rounded-pill pe-4">
-            <img src="./assets/images/logo/sass.svg" class="me-3" alt="Saas">
-            Easy Customisable with SASS
-        </div>
-        </div>
-        <div class="col-auto">
-        <div class="d-flex align-items-center border rounded-pill pe-4">
-            <img src="./assets/images/logo/seo.svg" class="me-3" alt="Seo"> SEO Friendly Code
-        </div>
-        </div>
-        <div class="col-auto">
-        <div class="d-flex align-items-center border rounded-pill pe-4">
-            <img src="./assets/images/logo/documentation.svg" class="me-3" alt="Documentation"> Detailed Documentation
-        </div>
-        </div>
-        <div class="col-auto">
-        <div class="d-flex align-items-center border rounded-pill pe-4">
-            <img src="./assets/images/logo/responsive.svg" class="me-3" alt="Documentation"> Fully Responsive
-        </div>
-        </div>
-    </div>
-    </div>
-</section>
-
-
-
-<!-- offer -->
-<section class="py-15 py-xl-20 overflow-hidden border-top">
-    <div class="container">
-    <div class="row justify-content-between align-items-center gutter-3 gutter-lg-5">
-        <div class="col-lg-5">
-        <div class="row mb-6">
-            <div class="col">
-            <h2><a href="https://themes.getbootstrap.com/product/cube-multipurpose-template-ui-kit/"
-                class="text-primary underline">Buy now</a> and get one new
-                demo every month.</h2>
-            <div class="mt-5">
-                <span class="eyebrow mb-2 text-muted">Next Demo will be realeased in:</span>
-                <div class="countdown" data-countdown="Jul 25, 2021 21:00:00"></div>
-            </div>
-            </div>
-        </div>
-        </div>
-        <div class="col-lg-6">
-        <div class="position-relative">
-            <img class="img-fluid shadow-lg level-1" src="./assets/images/pages/shop.jpg" alt="Image"
-            data-aos="fade-up" data-aos-delay="800">
-            <img class="img-fluid shadow-lg position-absolute level-2 start-10 top-20"
-            src="./assets/images/pages/about.jpg" alt="Image" data-aos="fade-up" data-aos-delay="400">
-            <img class="img-fluid shadow-lg position-absolute level-3 start-20 bottom-20"
-            src="./assets/images/pages/services.jpg" alt="Image" data-aos="fade-up">
-        </div>
-        </div>
-    </div>
-    </div>
-
-</section>
-
-<section class="py-15 py-xl-20">
-      <div class="container">
-        <div class="row g-4 g-xl-6">
-          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
-            <a href="" class="card h-100 border card-arrow">
-              <div class="card-body">
-                <h4 class="card-title fw-light fs-4"><span class="fw-bold">엠오벤처스</span>와 함께 일하고 싶어요</h4>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-            <a href="" class="card card-arrow bg-primary inverted overflow-hidden">
-              <div class="card-body">
-                <h4 class="card-title fw-light fs-4"><span class="fw-bold">투자</span>를 받고 싶어요</h4>
-              </div>
-              <img class="position-absolute top-50 start-50 translate-middle level-3" src="{% static 'images/svg/dialog.svg' %}" alt="">
-            </a>
-          </div>
+  <section class="overflow-hidden inverted bg-black">
+    <div class="d-flex flex-column min-vh-100 container py-10 level-1">
+      <div class="row justify-content-center my-auto">
+        <div class="col-lg-8 col-xl-6 text-center">
+        {% blocktrans %}
+          <h1 class="display-1 lh-sm">MO Ventures changes 
+          <span data-typed='{"strings": ["paradigms", "world", "future", "business"]}'></span>
+          </h1>
+        {% endblocktrans %}
         </div>
       </div>
-    </section>
-
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-xl-4 text-center">
+          <p class="text-secondary">
+            {% blocktrans %}
+            <a href="#list" class="underline text-white fw-bold">Discover</a> how we achieve 
+            {% endblocktrans %}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="background background-overlay" data-aos="zoom-out" data-aos-delay="200">
+      <video data-video playsinline autoplay muted loop>
+        <source src="{% static 'video/video-1.mp4' %}" type="video/mp4" />
+      </video>
+    </div>
+    <span class="scroll-down"></span>
+  </section>
+  <!-- features -->
+  <section id="list" class="py-15 py-xl-20">
+    <div class="container mt-3 mt-xl-5">
+      <div class="row mb-10 g-3 g-xl-5 align-items-end">
+        <div class="col-lg-8">
+          <h1 class="display-1">{% trans "Fundamentals" %}</h1>
+        </div>
+      </div>
+      <div class="col-md-6 col-xl-12">
+        <a href="/{% if LANGUAGE == "ko" %}ko/{% endif %}philosophy" class="card card-arrow card-hover-border bg-white">
+        <div class="row g-0">
+          <div class="col-xl-6">
+            <figure class="media equal-16-10" >
+              <span style="background-image: url({% static 'images/philosophy.jpeg' %})">
+              </span>
+            </figure>
+          </div>
+          <div class="col-xl-6">
+            <div class="card-body">
+              <span class="eyebrow text-muted">{% trans "Philosophy" %}</span>
+              <h2 class="card-title mt-2 fs-4 lh-2 pe-xl-10">{% trans "The first step toward greatness is to be honest" %}</h2>
+              <h5 class="fw-light fst-italic">{% trans "Proverb" %}</h5>
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-xl-12">
+        <a href="/{% if LANGUAGE == "ko" %}ko/{% endif %}people" class="card card-arrow card-hover-border bg-white">
+        <div class="row g-0">
+          <div class="col-xl-6">
+            <figure class="media equal-16-10" >
+              <span style="background-image: url({% static 'images/people.jpeg' %})">
+              </span>
+            </figure>
+          </div>
+          <div class="col-xl-6">
+            <div class="card-body">
+              <span class="eyebrow text-muted">{% trans "People" %}</span>
+              <h2 class="card-title mt-2 fs-4 lh-2 pe-xl-10">{% trans "Great Things Happen To Great People" %}</h2>
+              <h5 class="fw-light fst-italic">{% trans "Anonymous" %}</h5>
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-xl-12">
+        <a href="/{% if LANGUAGE == "ko" %}ko/{% endif %}portfolio" class="card card-arrow card-hover-border bg-white">
+        <div class="row g-0">
+          <div class="col-xl-6">
+            <figure class="media equal-16-10" >
+              <span style="background-image: url({% static 'images/portfolio.jpeg' %})">
+              </span>
+            </figure>
+          </div>
+          <div class="col-xl-6">
+            <div class="card-body">
+              <span class="eyebrow text-muted">Portfolio</span>
+              <h2 class="card-title mt-2 fs-4 lh-2 pe-xl-10">{% trans "Be greedy when others are fearful" %}</h2>
+              <h5 class="fw-light fst-italic">{% trans "Warren Buffet" %}</h5>
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-xl-12">
+        <a href="/{% if LANGUAGE == "ko" %}ko/{% endif %}experience" class="card card-arrow card-hover-border bg-white">
+        <div class="row g-0">
+          <div class="col-xl-6">
+            <figure class="media equal-16-10" >
+              <span style="background-image: url({% static 'images/experience.jpeg' %})">
+              </span>
+            </figure>
+          </div>
+          <div class="col-xl-6">
+            <div class="card-body">
+              <span class="eyebrow text-muted">Experience</span>
+              <h2 class="card-title mt-2 fs-4 lh-2 pe-xl-10">{% trans "The only source of knowledge is experience" %}</h2>
+              <h5 class="fw-light fst-italic">{% trans "Albert Einstein" %}</h5>
+            </div>
+          </div>
+        </div>
+        </a>
+      </div>
+      {% comment %}
+      <div class="row mt-5 g-4 g-xl-6">
+        <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+          <a href="" class="card h-100 border card-arrow">
+            <div class="card-body">
+              <h4 class="card-title fw-light fs-4">
+                {% blocktrans %}
+                <span class="fw-bold">엠오벤처스</span>와 함께 일하고 싶어요
+                {% endblocktrans %}
+              </h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+          <a href="" class="card card-arrow bg-primary inverted overflow-hidden">
+            <div class="card-body">
+              <h4 class="card-title fw-light fs-4">
+                {% blocktrans %}
+                <span class="fw-bold">투자</span>를 받고 싶어요
+                {% endblocktrans %}
+              </h4>
+            </div>
+            <img class="position-absolute top-50 start-50 translate-middle level-3" src="{% static 'images/svg/dialog.svg' %}" alt="">
+          </a>
+        </div>
+      </div>
+      {% endcomment %}
+    </div>
+</div>
+</section>
 {% endblock body %}
