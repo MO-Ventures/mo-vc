@@ -65,7 +65,7 @@
           {% for _ in 1234|make_list %}
             <li class="nav-item">
               <a class="nav-link {{ navbar|default:"text-white" }}" 
-              href="/{% if LANGUAGE == "ko" %}ko/{% endif %}{% cycle 'philosophy' 'people' 'portfolio' 'experience' as page%}" 
+              href="/{% if LANGUAGE == "ko" %}ko/{% endif %}{% cycle 'about' 'people' 'portfolio' 'experience' as page%}" 
               id="" role="button" data-bs-toggle="" aria-expanded="false">
               {% trans page|title %}
               </a>

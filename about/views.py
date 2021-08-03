@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.views.generic import ListView
-from philosophy.models import Philosophy
+from about.models import Philosophy
 from typing import Any, Dict
 
 # Create your views here.
