@@ -2,34 +2,28 @@
 {% load static %}
 {% load i18n %}
 {% block body %}
-<section class="py-15 py-xl-20">
-  <div class="container">
-  <div class="row mb-8">
-    <div class="col-lg-10">
-      <h2>{% blocktrans %}
-        We invest in the following:
-        {% endblocktrans %}
-      </h2>
-    </div>
+<section class="py-15 py-xl-20 pb-xl-15">
+  <div class="container mt-10">
+  {% blocktrans %}
+    <h1>We invest in 
+    <span data-typed='{"strings": [{{ list }}]}'></span></h1>
+  {% endblocktrans %}
   </div>
-  <div class="accordion" id="accordion-1">
-  {% for i in investment %}
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="heading-1-{{ forloop.counter }}">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapse-1-{{ forloop.counter }}" aria-expanded="false" aria-controls="collapse-1-{{ forloop.counter }}">
-          {{ i.name }}
-        </button>
-      </h2>
-      <div id="collapse-1-{{ forloop.counter }}" class="accordion-collapse collapse" aria-labelledby="heading-1-{{ forloop.counter }}"
-        data-bs-parent="#accordion-1">
-        <div class="accordion-body">
-          <p class="text-secondary">
-          {{ i.description }}
-          </p>
-        </div>
+</section>
+{% for p in object_list %}
+<section class="py-10 py-xl-15 border-top">
+  <div class="container">
+    <div class="row g-4 justify-content-between">
+      <div class="col-md-4">
+        <h2 class="fs-5">{{ p.name }}</h2>
+      </div>
+      <div class="col-md-8">
+        <p class="text-secondary">
+        {{ p.description }}
+        </p>
       </div>
     </div>
-  {% endfor %}
+  </div>
 </section>
+{% endfor %}
 {% endblock body %}
