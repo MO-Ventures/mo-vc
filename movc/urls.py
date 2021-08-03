@@ -26,9 +26,14 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('', include('home.urls')),
-    path('philosophy/', include('philosophy.urls')),
+    path('maintenance/', include('maintenance.urls')),
+
+    path('about/', include('about.urls')),
     path('people/', include('people.urls')),
     path('portfolio/', include('portfolio.urls')),
+    path('contact/', include('contact.urls')),
+    path('experience/', include('maintenance.urls')),
+
     # path('join/', include('join.urls')),
 
     prefix_default_language=False,
