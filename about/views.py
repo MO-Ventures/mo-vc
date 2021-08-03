@@ -7,7 +7,7 @@ from typing import Any, Dict
 
 # Create your views here.
 class PhilosophyListView(ListView):
-    template_name = 'philosophy/index.html'
+    template_name = 'about/index.html'
     model = Philosophy
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:

@@ -1,5 +1,5 @@
 from modeltranslation.translator import register, TranslationOptions
-from philosophy.models import Philosophy
+from about.models import Philosophy
 
 @register(Philosophy)
 class PhilosophyTranslationOptions(TranslationOptions):
