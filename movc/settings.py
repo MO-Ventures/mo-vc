@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'adminsortable',
 
     'home',
-    'philosophy',
+    'about',
     'people',
     'portfolio',
     'contact',
