@@ -26,7 +26,7 @@
   <body class="{% block body-class %}{% endblock body-class %}">
     <nav id="mainNav" class="navbar navbar-expand-lg navbar-sticky navbar-dark">
       <div class="container">
-        <a href="/" class="navbar-brand"><img src="{% static 'images/logo/logo-light.svg' %}" alt="Logo"></a>
+        <a href="/{% if LANGUAGE == "ko" %}ko/{% endif %}" class="navbar-brand"><img src="{% static 'images/logo/logo-light.svg' %}" alt="Logo"></a>
         <!-- secondary -->
         <ul class="navbar-nav navbar-nav-secondary order-lg-3">
           <li class="nav-item d-lg-none">
