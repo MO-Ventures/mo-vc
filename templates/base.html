@@ -23,6 +23,13 @@
     <!-- Title -->
     <title>MO VENTURES</title>
   </head>
+  <style>
+  @media only screen and (max-width: 992px) {
+    .nav-link, .breadcrumb-item > a {
+      color: white !important;
+    }
+  }
+  </style>
   <body class="{% block body-class %}{% endblock body-class %}">
     <nav id="mainNav" class="navbar navbar-expand-lg navbar-sticky navbar-dark">
       <div class="container">
@@ -62,12 +69,17 @@
         <!-- primary -->
         <div class="collapse navbar-collapse" id="navbar" data-bs-parent="#mainNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link {{ navbar|default:"text-white" }}" 
-              href="/{% if LANGUAGE == "ko" %}ko/{% endif %}about" 
-              id="" role="button" data-bs-toggle="" aria-expanded="false">
-              {% trans "About" %}
+            <li class="nav-item dropdown dropdown-hover">
+              <a class="nav-link dropdown-toggle {{ navbar|default:"text-white" }}" href="/{% if LANGUAGE == "ko" %}ko/{% endif %}about" id="navbarDropdown-3" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" data-bs-auto-close="outside">
+                {% trans "About" %}
               </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown-3">
+                <li><a data-scroll class="dropdown-item"
+                    href="/{% if LANGUAGE == "ko" %}ko/{% endif %}about/business_model">{% trans "Business Model" %}</a></li>
+                <li><a data-scroll class="dropdown-item "
+                    href="/{% if LANGUAGE == "ko" %}ko/{% endif %}about/philosophy">{% trans "Philosophy" %}</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link {{ navbar|default:"text-white" }}" 
@@ -90,6 +102,29 @@
               {% trans "Experience" %}
               </a>
             </li>
+            <li class="nav-item d-lg-none mt-1">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                {% if LANGUAGE == "en" %}
+                  <span class="{{ navbar|default:"text-white"}}">English</span>
+                {% else %}
+                  <a href="{{ request.get_full_path|slice:'3:' }}" class="{{ navbar|default:"text-white"}}">
+                    English
+                  </a>
+                {% endif %}
+                </li>
+                <li class="breadcrumb-item">
+                {% if LANGUAGE == "ko" %}
+                  <span class="{{ navbar|default:"text-white"}}">한국어</span>
+                {% else %}
+                  <a href="/ko{{ request.get_full_path }}" class="{{ navbar|default:"text-white"}}">
+                    한국어
+                  </a>
+                {% endif %}
+                </li>
+              </ol>
+            </a>
+          </li>
           </ul>
         </div>
         <!-- mobile user menu -->
