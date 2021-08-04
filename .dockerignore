@@ -133,7 +133,6 @@ dmypy.json
 !**/migrations/__init__.py
 staticfiles
 media
-secrets.py
 data/
 
 # Unfinished
@@ -141,6 +140,3 @@ join
 
 # Mac
 .DS_Store
-
-# Docker
-.env
