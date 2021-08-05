@@ -12,17 +12,22 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-from movc.secrets import *
+import json
+from google.oauth2 import service_account
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_PATH = BASE_DIR / 'secrets.json'
+
+SECRETS = json.load(open(SECRET_PATH))
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = ''
+SECRET_KEY = SECRETS['DJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False) == 'True'
@@ -100,12 +105,11 @@ DATABASES = {
 if not DEBUG:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.environ.get('POSTGRES_DB'),
-            'USER': os.environ.get('POSTGRES_USER'),
-            'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
-            'HOST': 'db',
-            'PORT': 5432,
+            'ENGINE': 'django.db.backends.mysql',
+            'HOST': SECRETS['DB_HOST'],
+            'NAME': SECRETS['DB_NAME'],
+            'USER': SECRETS['DB_USER'],
+            'PASSWORD': SECRETS['DB_PASSWORD']
         }
     }
 
@@ -154,25 +158,16 @@ LOCALE_PATHS = [ BASE_DIR / 'locale' ]
 STATICFILES_DIRS = [ BASE_DIR / 'static' ]
 
 if not DEBUG:
-    # AWS_ACCESS_KEY_ID = ''
-    # AWS_SECRET_ACCESS_KEY = ''
+    GS_BUCKET_NAME = SECRETS['GS_BUCKET_NAME']
+    GS_PROJECT_ID = SECRETS['GS_PROJECT_ID']
+    GS_CREDENTIALS = service_account.Credentials.from_service_account_file(BASE_DIR / 'google_credentials.json')
+    GS_LOCATION = 'static'
 
-    # AWS_STORAGE_BUCKET_NAME = ''
-    # AWS_REGION = ''
-    # AWS_S3_CUSTOM_DOMAIN = ''
-    AWS_LOCATION = 'static'
-    AWS_DEFAULT_ACL = 'public-read'
-    AWS_S3_OBJECT_PARAMETERS = {
-        'CacheControl': 'max-age=86400',
-    }
+    STATIC_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/static/'
+    MEDIA_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/media/'
 
-    STATIC_ROOT = '/static/'
-    STATIC_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_REGION}.amazonaws.com/static/'
-    MEDIA_ROOT = '/media/'
-    MEDIA_URL = f'https://{AWS_STORAGE_BUCKET_NAME}.s3.{AWS_REGION}.amazonaws.com/media/'
-
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3StaticStorage'
+    DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
+    STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 
 else:
     STATIC_URL = '/staic/'

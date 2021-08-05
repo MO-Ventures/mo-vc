@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 # C extensions
+.bundle
 *.so
 
 # Distribution / packaging
@@ -56,10 +57,16 @@ coverage.xml
 *.pot
 
 # Django stuff:
+!__init__.py
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+**/migrations/**
+staticfiles
+media
+secrets.json
+data/
 
 # Flask stuff:
 instance/
@@ -128,19 +135,11 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Django
-**/migrations/**
-!**/migrations/__init__.py
-staticfiles
-media
-secrets.py
-data/
-
 # Unfinished
 join
 
 # Mac
 .DS_Store
 
-# Docker
-.env
+# Google Cloud
+google_credentials.json
