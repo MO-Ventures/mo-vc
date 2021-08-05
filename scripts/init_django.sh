@@ -7,4 +7,6 @@ python /code/manage.py makemigrations
 
 python /code/manage.py migrate
 
-python /code/manage.py createsuperuser --noinput
+python /code/manage.py compilemessages
+
+python /code/manage.py createsuperuser --username admin --email travis.cho@mo-vc.com --noinput
