@@ -169,11 +169,10 @@ if os.environ.get('GAE_APPLICATION', False):
     DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
     STATICFILES_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
 
-else:
-    STATIC_URL = '/staic/'
-    STATIC_ROOT = BASE_DIR / 'staticfiles'
-    MEDIA_URL = '/media/'
-    MEDIA_ROOT = BASE_DIR / 'media'
+STATIC_URL = '/staic/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 if os.environ.get('GAE_APPLICATION', False):
     PREPEND_WWW = True
