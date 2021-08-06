@@ -7,7 +7,7 @@ class Sector(models.TextChoices):
     VC = 'VC', 'VC'
     PE = 'PE', 'PE'
     Management = 'Management', 'Management'
-    Advisory_board = 'Advisory Board', 'Advisory Board'
+    Advisory_board = 'Advisory Board', 'Advisory_Board'
 
 class Introduction(models.Model):
     heading = models.CharField(max_length=30)

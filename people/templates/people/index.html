@@ -17,10 +17,11 @@
       </div>
     </div>
     <div class="mb-5 col-12">
-      <button class="btn btn-filter rounded-pill current" data-filter="*" data-target="#grid1">all</button>
-      {% for s in sector %}
-      <button class="btn btn-filter rounded-pill m-1" data-filter=".{{ s }}" data-target="#grid1">{{ s }}</button>
-      {% endfor %}
+      <button class="btn btn-filter rounded-pill current" data-filter="*" data-target="#grid1">{% trans "all" %}</button>
+      <button class="btn btn-filter rounded-pill m-1" data-filter=".VC" data-target="#grid1">VC</button>
+      <button class="btn btn-filter rounded-pill m-1" data-filter=".PE" data-target="#grid1">PE</button>
+      <button class="btn btn-filter rounded-pill m-1" data-filter=".Management" data-target="#grid1">{% trans "Management" %}</button>
+      <button class="btn btn-filter rounded-pill m-1" data-filter=".Advisory_Board" data-target="#grid1">{% trans "Advisory Board" %}</button>
     </div>
     <div class="row g-3 g-xl-5" id="grid1" data-isotope>
     {% for people in object_list %}
