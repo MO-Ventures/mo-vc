@@ -143,3 +143,6 @@ join
 
 # Google Cloud
 google_credentials.json
+
+# Visual Studio Code
+.vscode
