@@ -121,5 +121,11 @@
 
 {% block javascript %}
 <script>
+$(document).on("click", ".breadcrumb li", function(){
+  if (!$(this).hasClass("active")) {
+    $("li.active").removeClass("active");
+    $(this).addClass("active");
+  }
+});
 </script>
 {% endblock javascript %}
