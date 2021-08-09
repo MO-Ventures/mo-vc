@@ -102,7 +102,7 @@ DATABASES = {
     }
 }
 
-if os.environ.get('GAE_APPLICATION', False):
+if not DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
@@ -157,7 +157,7 @@ LOCALE_PATHS = [ BASE_DIR / 'locale' ]
 
 STATICFILES_DIRS = [ BASE_DIR / 'static' ]
 
-if os.environ.get('GAE_APPLICATION', False):
+if not DEBUG:
     GS_BUCKET_NAME = SECRETS['GS_BUCKET_NAME']
     GS_PROJECT_ID = SECRETS['GS_PROJECT_ID']
     GS_CREDENTIALS = service_account.Credentials.from_service_account_file(BASE_DIR / 'google_credentials.json')
@@ -174,7 +174,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-if os.environ.get('GAE_APPLICATION', False):
+if not DEBUG:
     PREPEND_WWW = True
 
 # Default primary key field type
