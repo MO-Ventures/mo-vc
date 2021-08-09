@@ -1,8 +1,6 @@
 from django.urls import path
-from about.views import BusinessModelView, PhilosophyView
+from about.views import AboutView
 
 urlpatterns = [
-    path('', BusinessModelView.as_view()),
-    path('business_model/', BusinessModelView.as_view()),
-    path('philosophy/', PhilosophyView.as_view()),
+    path('', AboutView.as_view()),
 ]

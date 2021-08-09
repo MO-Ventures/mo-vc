@@ -1,29 +1,300 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load i18n %}
+
+{% block style %}
+<style>
+  @media only screen and (max-width: 992px) {
+    #menu,
+    .breadcrumb-item > a,
+    .breadcrumb-item > span {
+      color: white !important;
+    }
+    #tab {
+      color: black !important;
+    }
+    .nav-icon {
+      color: blue !important;
+    }
+  }
+</style>
+{% endblock style %}
+
 {% block body %}
-<section class="py-15 py-xl-20 pb-xl-15">
-  <div class="container mt-10">
-  {% blocktrans %}
-    <h1>We invest in 
-    <span data-typed='{"strings": [{{ list }}]}'></span></h1>
-  {% endblocktrans %}
-  </div>
-</section>
-{% for p in object_list %}
-<section class="py-10 py-xl-15 border-top">
-  <div class="container">
-    <div class="row g-4 justify-content-between">
-      <div class="col-md-4">
-        <h2 class="fs-5">{{ p.name }}</h2>
-      </div>
-      <div class="col-md-8">
-        <p class="text-secondary">
-        {{ p.description }}
-        </p>
+<div data-bottom-top="background-color: rgba(255, 255, 255, 1)" data-center-center="background-color: rgba(215, 225, 236, 1)" data-top-bottom="background-color: rgba(255, 255, 255, 1)">
+  <section class="py-15 py-xl-20 pb-xl-15">
+    <div class="container mt-5">
+      <h1>
+        {% blocktrans %}
+        We are
+        <span data-typed='{"strings": ["Venture Capital.", "Private Equity.", "Consulting Firm."]}'></span>
+        {% endblocktrans %}
+      </h1>
+    </div>
+  </section>
+  <section class="mb-10" data-aos="fade-up" data-aos-delay="150">
+    <div class="container">
+      <div class="row g-0 bg-white">
+        <div class="col-lg-6 p-4 p-md-10 order-lg-2">
+          <h3 class="fw-bold">{% trans "Venture Capital" %}</h3>
+          <p class="fs-lg text-secondary">
+            {% blocktrans %}
+            We are very privileged to invest in such great potential companies.
+            Our mission is to serve entrepreneurs and companies.
+            {% endblocktrans %}
+          </p>
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-group list-group-minimal">
+                <li class="list-group-item">
+                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                    <i class="bi bi-check2 text-primary"></i>
+                  </div>
+                  {% trans "Fund Raising" %}
+                </li>
+                <li class="list-group-item">
+                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                    <i class="bi bi-check2 text-primary"></i>
+                  </div>
+                  {% trans "Invest in Startups and Pre-IPO Companies" %}
+                </li>
+                <li class="list-group-item">
+                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                    <i class="bi bi-check2 text-primary"></i>
+                  </div>
+                  {% trans "Post Management" %}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1 position-relative">
+          <span class="background" style="background-image: url({% static 'images/venture-capital.jpg' %})"></span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-{% endfor %}
+  </section>
+  <section class="mb-10" data-aos="fade-up" data-aos-delay="150">
+    <div class="container">
+      <div class="row g-0 bg-white">
+        <div class="col-lg-6 order-lg-2 position-relative">
+          <span class="background" style="background-image: url({% static 'images/private-equity.jpg' }%})"></span>
+        </div>
+        <div class="col-lg-6 p-4 p-md-10 order-lg-1">
+          <h3 class="fw-bold">{% trans "Private Equity" %}</h3>
+          <p class="fs-lg text-secondary">
+            {% blocktrans %}
+            As a private Equity, we strive to satisfy our investors with profits. 
+            We actively engage in operations and improve the valuation of the company significantly.
+            {% endblocktrans %}
+          </p>
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-group list-group-minimal">
+                <li class="list-group-item">
+                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                    <i class="bi bi-check2 text-primary"></i>
+                  </div>
+                  {% trans "Fund Raising" %}
+                </li>
+                <li class="list-group-item">
+                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                    <i class="bi bi-check2 text-primary"></i>
+                  </div>
+                  M&amp;A
+                </li>
+                <li class="list-group-item">
+                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                    <i class="bi bi-check2 text-primary"></i>
+                  </div>
+                  {% trans "Buyout and Management" %}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mb-10" data-aos="fade-up" data-aos-delay="150">
+    <div class="container">
+      <div class="row g-0 bg-white">
+        <div class="col-lg-6 p-4 p-md-10 order-lg-2">
+          <h3 class="fw-bold">{% trans "Consulting" %}</h3>
+          <p class="fs-lg text-secondary">
+            {% blocktrans %}
+            We take a consistent approach to help companies with better solutions.
+            Our consultants are in every field and ready to serve you regardless of your field, location, or difficulties.
+            {% endblocktrans %}
+          </p>
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="list-group list-group-minimal">
+                <li class="list-group-item">
+                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                    <i class="bi bi-check2 text-primary"></i>
+                  </div>
+                  {% trans "Provide Networking" %}
+                </li>
+                <li class="list-group-item">
+                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                    <i class="bi bi-check2 text-primary"></i>
+                  </div>
+                  {% trans "Provide Cash Flow Solutions" %}
+                </li>
+                <li class="list-group-item">
+                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                    <i class="bi bi-check2 text-primary"></i>
+                  </div>
+                  {% trans "Provide Exit Strategy" %}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1 position-relative">
+          <span class="background" style="background-image: url({% static 'images/consulting.jpg' %})"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-15 py-xl-20">
+    <div class="container">
+      <div class="row justify-content-center mb-10">
+        <div class="col-lg-6 text-center">
+          <h2 class="fw-light">
+            {% blocktrans %}
+            How we are
+            <span class="fw-bold">different.</span>
+            {% endblocktrans %}
+          </h2>
+        </div>
+      </div>
+      <div class="row g-3 g-xl-5">
+        <div class="col-lg-4" data-aos="fade-up">
+          <div class="card bg-opaque-green">
+            <div class="card-header">
+              <i class="bi bi-award fs-2"></i>
+            </div>
+            <div class="card-footer">
+              <h3 class="fs-5">{% trans "Experience" %}</h3>
+              <p class="text-secondary">
+                {% blocktrans %}
+                Our team is composed of exceptionally talented and experienced people. 
+                Each member has deep expertise in one's field with integrity, creativity, and independent thinking.
+                {% endblocktrans %}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card bg-opaque-green">
+            <div class="card-header">
+              <i class="bi bi-layers fs-2"></i>
+            </div>
+            <div class="card-footer">
+              <h3 class="fs-5">{% trans "Strategy" %}</h3>
+              <p class="text-secondary">
+                {% blocktrans %}
+                Based on our experiences, we provide a client with the most efficient and low-risk strategies.
+                We are highly sensitive to economic conditions and periodically adjust strategy if necessary.
+                {% endblocktrans %}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card bg-opaque-green">
+            <div class="card-header">
+              <i class="bi bi-people fs-2"></i>
+            </div>
+            <div class="card-footer">
+              <h3 class="fs-5">{% trans "Networking" %}</h3>
+              <p class="text-secondary">
+                {% blocktrans %}
+                We have discovered that networking is power in terms of business. 
+                Therefore, we have partnered with experts and institutions in different fields,
+                thereby providing a better quality of services.
+                {% endblocktrans %}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-15 py-xl-20">
+    <div class="container">
+      <div class="row mb-10">
+        <div class="col">
+          <h2 class="fw-bold">{% trans "Our Philosophy" %}</h2>
+        </div>
+      </div>
+      <div class="row g-3 g-xl-5 justify-content-between">
+        <div class="col-xl-4">
+          <ul class="nav nav-tabs flex-xl-column" id="component-1" role="tablist">
+            <li class="nav-item">
+              <button class="nav-link fs-5 active" id="tab component-1-1-tab" data-bs-toggle="pill" data-bs-target="#component-1-1" type="button" role="tab" aria-controls="component-1-1" aria-selected="true">{% trans "Transparency" %}</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link fs-5" id="tab component-1-2-tab" data-bs-toggle="pill" data-bs-target="#component-1-2" type="button" role="tab" aria-controls="component-1-2" aria-selected="false">{% trans "Founder" %}</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link fs-5" id="tab component-1-3-tab" data-bs-toggle="pill" data-bs-target="#component-1-3" type="button" role="tab" aria-controls="component-1-3" aria-selected="false">{% trans "Sustainable" %}</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link fs-5" id="tab component-1-4-tab" data-bs-toggle="pill" data-bs-target="#component-1-4" type="button" role="tab" aria-controls="component-1-4" aria-selected="false">{% trans "Socially Responsible" %}</button>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link fs-5" id="tab component-1-5-tab" data-bs-toggle="pill" data-bs-target="#component-1-5" type="button" role="tab" aria-controls="component-1-5" aria-selected="false">{% trans "Profitable" %}</button>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xl-8">
+          <div class="tab-content" id="component-1-content">
+            <div class="tab-pane fade show active" id="component-1-1" role="tabpanel" aria-labelledby="component-1-1-tab">
+              <h5>{% trans "" %}</h5>
+              <p>
+              {% blocktrans %}
+
+              {% endblocktrans %}
+              </p>
+            </div>
+            <div class="tab-pane fade" id="component-1-2" role="tabpanel" aria-labelledby="component-1-2-tab">
+              <h5>{% trans "" %}</h5>
+              <p>
+              {% blocktrans %}
+              {% endblocktrans %}
+              </p>
+            </div>
+            <div class="tab-pane fade" id="component-1-3" role="tabpanel" aria-labelledby="component-1-3-tab">
+              <h5>{% trans "Environmental sustainablity is part of our purpose, mission, and practices." %}</h5>
+              <p>
+              {% blocktrans %}
+              
+              {% endblocktrans %}
+              </p>
+            </div>
+            <div class="tab-pane fade" id="component-1-4" role="tabpanel" aria-labelledby="component-1-4-tab">
+              <h5>{% trans "Fourth tab content here .." %}</h5>
+              <p>
+              {% blocktrans %}
+
+              {% endblocktrans %}
+              </p>
+            </div>
+            <div class="tab-pane fade" id="component-1-4" role="tabpanel" aria-labelledby="component-1-4-tab">
+              <h5>{% trans "Fourth tab content here .." %}</h5>
+              <p>
+              {% blocktrans %}
+
+              {% endblocktrans %}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
 {% endblock body %}
