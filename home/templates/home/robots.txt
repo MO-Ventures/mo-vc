@@ -1,3 +1,2 @@
-User-Agent: *
-
-Sitemap: https://www.mo-vc.com/sitemap.xml
+User-agent: *
+Allow: /
