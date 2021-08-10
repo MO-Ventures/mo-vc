@@ -15,6 +15,34 @@
     color: blue !important;
   }
 }
+
+@media (min-width:992px) {
+  .modal-content {
+    height: 70vh;
+  }
+  #profile_pics {
+    padding: 1rem !important;
+  }
+  #modalLabel {
+    padding-top: 2rem !important;
+  }
+  #modal-text {
+    overflow: auto;
+  }
+  #modal-image {
+    height: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  #modal-inside {
+    overflow: auto;
+  }
+  #modal-image {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
 </style>
 {% endblock style %}
 
@@ -65,34 +93,6 @@
     {% endfor %}
     </div>
   </div>
-  <style>
-  @media (min-width:992px) {
-    .modal-content {
-      height: 70vh;
-    }
-    #profile_pics {
-      padding: 1rem !important;
-    }
-    #modalLabel {
-      padding-top: 2rem !important;
-    }
-    #modal-text {
-      overflow: auto;
-    }
-    #modal-image {
-      height: 100%;
-    }
-  }
-  @media (max-width: 991px) {
-    #modal-inside {
-      overflow: auto;
-    }
-    #modal-image {
-      padding-top: 2rem !important;
-      padding-bottom: 2rem !important;
-    }
-  }
-  </style>
   {% for people in object_list %}
   <div class="modal fade" id="peopleModal-{{ forloop.counter }}" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
     <div class="modal-xl modal-dialog modal-dialog-centered modal-fullscreen-lg-down" id="modal-frame">
