@@ -162,6 +162,7 @@ if not DEBUG:
     GS_PROJECT_ID = SECRETS['GS_PROJECT_ID']
     GS_CREDENTIALS = service_account.Credentials.from_service_account_file(BASE_DIR / 'google_credentials.json')
     GS_LOCATION = 'static'
+    GS_DEFAULT_ACL = 'publicRead'
 
     STATIC_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/static/'
     MEDIA_URL = f'https://storage.googleapis.com/{GS_BUCKET_NAME}/media/'
