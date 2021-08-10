@@ -10,7 +10,7 @@ class Sector(models.TextChoices):
     Management = 'Management', 'Management'
     Advisory_board = 'Advisory Board', 'Advisory_Board'
 
-class People(SortableMixin):
+class Employee(SortableMixin):
     the_order = models.PositiveIntegerField(default=0, editable=False, db_index=True)
     name = models.CharField(max_length=20)
     sector = models.CharField(max_length=20, choices=Sector.choices, default=Sector.VC)
