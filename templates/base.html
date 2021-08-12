@@ -150,11 +150,16 @@
     <script src="{% static 'js/index.bundle.js' %}"></script>
 
     <script>
-    $(document).ready(function () { 
-      $(document).on('click touchmove touchstart', function () {
-       $('.navbar-collapse').collapse('hide');
-      });
-    });
+    $(function() {
+      $(document).click(function(e) {
+        var clickover = $(e.target);
+        var _opened = $(".navbar-collapse").hasClass("show");
+          if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+            $('.navbar-collapse').collapse('hide');
+          }
+        });
+      }
+    );
     </script>
 
     {% block javascript %}
