@@ -1,0 +1,579 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-12 17:30+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: about/templates/about/index.html:30
+msgid ""
+"\n"
+"      We are <br/>\n"
+"      <span class=\"fw-bold\" data-typed='{\"strings\": [\"Venture Capital."
+"\", \"Private Equity.\", \"Consulting Firm.\"]}'></span>\n"
+"      "
+msgstr ""
+"\n"
+"      우리는<br/>\n"
+"      <span class=\"fw-bold\" data-typed='{\"strings\": [\"벤처캐피탈\", \"사"
+"모펀드\", \"컨설팅 회사\"]}'></span>\n"
+"      <br/>입니다.\n"
+"      "
+
+#: about/templates/about/index.html:41
+msgid "Venture Capital"
+msgstr "벤처캐피탈"
+
+#: about/templates/about/index.html:43
+msgid ""
+"\n"
+"          We are very privileged to invest in such great potential "
+"companies.\n"
+"          Our mission is to serve entrepreneurs and companies.\n"
+"          "
+msgstr ""
+"\n"
+"          위대한 잠재력을 가진 기업들과 동행하고 싶어하는 벤처캐피탈입니"
+"다. \n"
+"          저희의 사명은 기업가와 기업들을 섬기고 도와주는 것입니다.\n"
+"          "
+
+#: about/templates/about/index.html:55 about/templates/about/index.html:100
+msgid "Fund Raising"
+msgstr "펀드 레이징"
+
+#: about/templates/about/index.html:61
+msgid "Invest in Startups and Pre-IPO Companies"
+msgstr "스타트업 및 Pre-IPO 기업에 투자"
+
+#: about/templates/about/index.html:67
+msgid "Post Management"
+msgstr "사후 관리"
+
+#: about/templates/about/index.html:86
+msgid "Private Equity"
+msgstr "사모펀드"
+
+#: about/templates/about/index.html:88
+msgid ""
+"\n"
+"          As a private Equity, we strive to satisfy our investors with "
+"profits. \n"
+"          We actively engage in operations and improve the valuation of the "
+"company significantly.\n"
+"          "
+msgstr ""
+"\n"
+"          사모펀드로써, 저희는 투자자들에게 최고의 수익을 안겨주기 위해 노력"
+"합니다. \n"
+"          또한 저희는 경영에 적극적으로 참여하고 기업의 가치를 획기적으로 올"
+"리기 위해 노력합니다. \n"
+"          "
+
+#: about/templates/about/index.html:112
+msgid "Buyout and Management"
+msgstr "인수 및 관리"
+
+#: about/templates/about/index.html:125
+msgid "Consulting"
+msgstr "컨설팅"
+
+#: about/templates/about/index.html:127
+msgid ""
+"\n"
+"          We take a consistent approach to help companies with better "
+"solutions.\n"
+"          Our consultants are in every field and ready to serve you "
+"regardless of your field, location, or difficulties.\n"
+"          "
+msgstr ""
+"\n"
+"          저희는 기업들에게 최고의 솔루션을 제공하기 위해 꾸준히 노력합니"
+"다. \n"
+"          저희 컨설턴트들은 모든 분야에 있으며 고객의 분야, 위치, 문제점과 상"
+"관없이 도와주기 위해 준비되어있습니다. \n"
+"          "
+
+#: about/templates/about/index.html:139
+msgid "Provide Networking"
+msgstr "네트워킹 제공"
+
+#: about/templates/about/index.html:145
+msgid "Provide Cash Flow Solutions"
+msgstr "재무구조 지원"
+
+#: about/templates/about/index.html:151
+msgid "Provide Exit Strategy"
+msgstr "인수 및 상장 전략 제공"
+
+#: about/templates/about/index.html:168
+msgid ""
+"\n"
+"          How we are\n"
+"          <span class=\"fw-bold\">different.</span>\n"
+"          "
+msgstr ""
+"\n"
+"          엠오벤처스의 \n"
+"          <span class=\"fw-bold\">차별성.</span>\n"
+"          "
+
+#: about/templates/about/index.html:182 home/templates/home/index.html:111
+#: templates/base.html:108
+msgid "Experience"
+msgstr "경험"
+
+#: about/templates/about/index.html:184
+msgid ""
+"\n"
+"              Our team is composed of exceptionally talented and experienced "
+"people. \n"
+"              Each member has deep expertise in one's field with integrity, "
+"creativity, and independent thinking.\n"
+"              "
+msgstr ""
+"\n"
+"              저희 팀은 최고의 재능과 경험을 겸비한 사람들로 구성되어 있으"
+"며, \n"
+"              각각 자기분야에서 최고의 전문가들입니다.\n"
+"              "
+
+#: about/templates/about/index.html:198
+msgid "Strategy"
+msgstr "전략"
+
+#: about/templates/about/index.html:200
+msgid ""
+"\n"
+"              Based on our experiences, we provide a client with the most "
+"efficient and low-risk strategies.\n"
+"              We are highly sensitive to economic conditions and "
+"periodically adjust strategy if necessary.\n"
+"              "
+msgstr ""
+"\n"
+"              저희의 다양한 경험을 통해, 저희 고객들에게 최고의 효율과 저위험"
+"의 전략을 제공합니다. \n"
+"              저희는 항상 세상의 흐름에 민감하게 반응하며 고객님과 트렌드에 "
+"가장 맞는 전략을 제공합니다 \n"
+"              "
+
+#: about/templates/about/index.html:214
+msgid "Networking"
+msgstr "네트워킹"
+
+#: about/templates/about/index.html:216
+msgid ""
+"\n"
+"              We have recognized that networking is power in terms of "
+"business. \n"
+"              Therefore, we have partnered with global networks of "
+"colleagues, companies, and institutions to provide a better quality of "
+"services.\n"
+"              "
+msgstr ""
+"\n"
+"              저희는 사업에 있어서 네트워킹의 중요성에 대해 인지하고 있습니"
+"다. \n"
+"              그러므로, 저희는 고객들에게 전세계적으로 있는 파트너, 기업, 그"
+"리고 기관들과 파트너쉽을 맺어 고객들에게 최고의 서비스를 제공합니다. \n"
+"              "
+
+#: about/templates/about/index.html:231
+msgid "Our Philosophy"
+msgstr "철학"
+
+#: about/templates/about/index.html:238
+msgid "Transparent"
+msgstr "투명한"
+
+#: about/templates/about/index.html:241
+msgid "Founder-Led"
+msgstr "경영자"
+
+#: about/templates/about/index.html:244
+msgid "Sustainable"
+msgstr "환경지속가능한"
+
+#: about/templates/about/index.html:247
+msgid "Socially Responsible"
+msgstr "사회책임적"
+
+#: about/templates/about/index.html:254
+msgid "Maintain transparency and everything else will follow"
+msgstr "투명성이 모든것을 해결해준다"
+
+#: about/templates/about/index.html:256
+msgid ""
+"\n"
+"            Our ultimate purpose is to bring positive impacts to our "
+"clients, our stakeholders, and our partners. \n"
+"            The profit we generate is derived from investing in startups and "
+"from offering counseling services to our clients. \n"
+"            To ensure that our purpose to be achieved, we need to evaluate "
+"every company thoroughly. \n"
+"            Evaluation is never an easy journey, and promising startups do "
+"not always have a good ending, but a lack of transparency even makes it "
+"worse. \n"
+"            It distracts our eyes and keeps us from unleashing the true "
+"potential of our clients. \n"
+"            Therefore, We require our clients to be as transparent as "
+"possible to make their dream true and make the impossible possible.\n"
+"            "
+msgstr ""
+"\n"
+"            저희의 궁극적 목표는 저희 고객과, 주주, 그리고 파트너들에게 이익"
+"을 안겨주는 것이고             그 이익은 저희가 투자와 고객들에게 컨설팅 서비"
+"스를 제공함으로써 발생합니다.            저희의 궁극적 목표를 이루기 위해서 "
+"기업가치를 평가할때 신중을 가해야합니다.             기업가치를 평가하는것은 "
+"쉬운 여정이 아니며, 유망한 기업 역시 항상 좋은 결과를 맺는 것은 아닙니"
+"다.             이런 어려운 과정중에 기업의 불투명성은 저희로 하여금 더욱 어"
+"렵게 만듭니다.            저희의 목적은 기업을 발굴해내는거지만 불투명성은 고"
+"객들의 성장하는것을 방해합니다.            이러한 이유로 저희는 저희 고객들 "
+"및 파트너들에게 투명성을 강조합니다.            "
+
+#: about/templates/about/index.html:267
+msgid "Great companies start with great leaders."
+msgstr "위대한 기업은 위대한 리더들에서 시작된다."
+
+#: about/templates/about/index.html:269
+msgid ""
+"\n"
+"            Founder-led companies outperform the rest. \n"
+"            The most world's largest companies have been founded and run by "
+"founders. \n"
+"            And the influence of the founders is surprisingly powerful and "
+"lasts for a long time. \n"
+"            Depends on the founders' entrepreneurship and leadership, any "
+"failing company can succeed, and any scalable company can fail. \n"
+"            We, therefore, have high expectations of founders in terms of "
+"investment. \n"
+"            We expect founders to have a vision for the future, enthusiasm "
+"for creating value, and strong fundamentals of business. \n"
+"            "
+msgstr ""
+"\n"
+"            경영자가 중심을 이루는 기업이 나머지 기업들 보다 뛰어나다합니다."
+"            대부분의 성공하는 기업들은 창업자가 경영을 지휘합니다."
+"            이 창업자의 영향력은 놀랍고 강력하며 오랫동안 지속됩니다. "
+"            창업자의 경영능력과 리더쉽에 의해 회사의 운명이 결정된다고 저희는 생각합니다. "
+"            그러므로 저희는 투자에 있어서 창업자의 역량에 매우 높은 기대를 가지고 있습니다. "
+"            우리는 창업자가 단순히 돈이 아닌, 회사의 미래에 대한 비전, 가치를 창출할려는 열정, 그리고 자신만의 사업철학을 가지는 것을 기대하고있습니다."
+"            "
+
+#: about/templates/about/index.html:280
+msgid "Environmental sustainablity is part of our mission."
+msgstr "환경보호는 저희 사명중 일부입니다."
+
+#: about/templates/about/index.html:282
+msgid ""
+"\n"
+"            Climate change is one of the greatest threats of our time, "
+"putting everyone's life at risk. \n"
+"            We are well aware of the urgency of climate change and the need "
+"for decisive actions. \n"
+"            To save our planet, we remain committed to our mission: scale up "
+"investments in sustainable startups. \n"
+"            Every investment we make will have a critical measurement of "
+"energy efficiency. \n"
+"            This does not necessarily limit our investment range or "
+"opportunities. \n"
+"            We have a firm belief that well-designed products have a lower "
+"environmental footprint as well. \n"
+"            We also hope our continual effort with environmental "
+"conservation motivates others to join us.\n"
+"            "
+msgstr ""
+"\n"
+"            기후 변화는 현재 우리의 삶을 위협하는 가장 위험한 요소중 하나입니다."
+"            저희 엠오벤처스는 이런 사태의 심각성을 인지하고 있으며, 행동의 필요성을 깨닫고 있습니다. "
+"            환경 문제를 해결하기 위해, 저희는 저희만의 약속을 지킬려 노력합니다. 바로 환경친화적인 기업에 투자하는 것입니다. "
+"            저희는 투자 결정을 내릴때 기업의 환경 친화성에 대해 엄격한 기준을 가지고 있습니다. "
+"            저희는 이러한 결정이 저희의 투자 기회를 제한한다 생각하지 않습니다. "
+"            그 이유는 우리는 좋은 제품과 서비스는 환경친화적이기도 하다라는 소견을 가지고 있기 때문입니다. "
+"            저희의 이런 환경친화적인 노력이 다른 사람들로 하여금 동기받아 함께 하기를 소망합니다. "
+"            "
+
+#: about/templates/about/index.html:294
+msgid "Success always takes help."
+msgstr "성공은 혼자 이뤄지지 않는다."
+
+#: about/templates/about/index.html:296
+msgid ""
+"\n"
+"            Before we begin, we would like to quote Melinda Gates: \n"
+"            \"If you are successful, it is because somewhere, sometime, "
+"someone gave you a life or an idea that started you in the right direction."
+"\"\n"
+"            We do investment, but seed money does not come out of nowhere. \n"
+"            We also get invested by limited partners who are willing to join "
+"our wills. \n"
+"            Our job is to make the flow of money, scale up businesses, and "
+"innovate the world. \n"
+"            Therefore, to accelerate the flow of money, we expect our "
+"partners to do the same thing: take social responsibility and benefit "
+"society to make the world a better place.\n"
+"            "
+msgstr ""
+"\n"
+"            시작하기에 앞서 Melinda Gates의 말을 인용하고자 합니다. \n"
+"            \"만약 당신이 성공한다면, 이는 어딘가에서 누군가가 당신이 올바른 방향으로 출발할수 있게끔 "
+"아이디어를 주었기 때문이다.\""
+"\n"
+"            저희는 투자를 하는 회사이지만, 투자할 수 있는 돈이 무(無)에서 만들어지지는 않습니다.\n"
+"            저희 또한 저희와 함께 하기를 원하는 LP분들에게 투자를 받아 운용하는 것입니다. "
+"            저희의 목적은 돈의 선순환을 일으켜, 기업을 키우고, 세상을 바꾸는 일입니다. "
+"            그러므로 이런 돈의 선순환을 가속화하기 위해, 저희는 저희 파트너들에게도 똑같은 것을 기대합니다. "
+"바로 사회적 책임을 가지고 사회에게 긍정적인 영향을 가져와 좀 더 나은 세상을 만드는것입니다."
+"            "
+
+#: contact/templates/contact/index.html:12
+msgid "Contact"
+msgstr "연락처"
+
+#: contact/templates/contact/index.html:17
+msgid "Email"
+msgstr "이메일"
+
+#: contact/templates/contact/index.html:21
+msgid "Phone"
+msgstr "번호"
+
+#: contact/templates/contact/index.html:32 templates/footer.html:14
+msgid "Seoul Office"
+msgstr "서울 사무소"
+
+#: home/templates/home/index.html:11
+msgid ""
+"\n"
+"          <h1 class=\"display-1 lh-sm\">MO Ventures changes \n"
+"          <span data-typed='{\"strings\": [\"paradigms\", \"world\", \"future"
+"\", \"business\"]}'></span>\n"
+"          </h1>\n"
+"        "
+msgstr ""
+"\n"
+"          <h1 class=\"display-1 lh-sm\">엠오벤처스는<br/>\n"
+"          <span data-typed='{\"strings\": [\"패러다임을\", \"세상을\", \"미래"
+"를\", \"비즈니스를\"]}'></span><br/>\n"
+"          바꿉니다</h1>\n"
+"        "
+
+#: home/templates/home/index.html:21
+msgid ""
+"\n"
+"            <a href=\"#list\" class=\"underline text-white fw-bold"
+"\">Discover</a> how we achieve \n"
+"            "
+msgstr ""
+"\n"
+"            엠오벤처스에 관하여 <a href=\"#list\" class=\"underline text-"
+"white fw-bold\">알아보기</a>\n"
+"            "
+
+#: home/templates/home/index.html:40
+msgid "Fundamentals"
+msgstr "철칙"
+
+#: home/templates/home/index.html:54 templates/base.html:87
+msgid "About"
+msgstr "정보"
+
+#: home/templates/home/index.html:55
+msgid "The first step toward greatness is to be honest"
+msgstr "위대함을 향한 첫걸음은 정직해지는 것이다."
+
+#: home/templates/home/index.html:56
+msgid "Proverb"
+msgstr "잠언"
+
+#: home/templates/home/index.html:73
+#: portfolio/templates/portfolio/index.html:63 templates/base.html:94
+msgid "People"
+msgstr "사람들"
+
+#: home/templates/home/index.html:74
+msgid "Great Things Happen To Great People"
+msgstr "위대한 사람들에게 위대한 일이 일어난다"
+
+#: home/templates/home/index.html:75
+msgid "Anonymous"
+msgstr "익명"
+
+#: home/templates/home/index.html:92 templates/base.html:101
+msgid "Portfolio"
+msgstr "포트폴리오"
+
+#: home/templates/home/index.html:93
+msgid "Be greedy when others are fearful"
+msgstr "다른 사람들이 두려워할때 탐욕스러워져라"
+
+#: home/templates/home/index.html:94
+msgid "Warren Buffet"
+msgstr "워렌 버핏"
+
+#: home/templates/home/index.html:112
+msgid "The only source of knowledge is experience"
+msgstr "지식의 유일한 원천은 경험이다"
+
+#: home/templates/home/index.html:113
+msgid "Albert Einstein"
+msgstr "알버트 아인슈타인"
+
+#: maintenance/templates/maintenance/index.html:11
+msgid ""
+"\n"
+"          <h1 class=\"display-5 lh-sm\">This page is under maintenance :(</"
+"h1>\n"
+"        "
+msgstr ""
+"\n"
+"          <h1 class=\"display-5 lh-sm\">죄송합니다, 현재 페이지는 점검중입니"
+"다.</h1>\n"
+"        "
+
+#: people/templates/people/index.html:55
+msgid "Our People"
+msgstr "저희의 소중한 사람들입니다."
+
+#: people/templates/people/index.html:69
+msgid "Leadership"
+msgstr "리더쉽"
+
+#: people/templates/people/index.html:72
+msgid "Management"
+msgstr "경영관리팀"
+
+#: portfolio/templates/portfolio/index.html:10
+msgid "Passion Combined With Experience."
+msgstr "열정에 엠오벤처스의 경험을 <br/>더했습니다"
+
+#: portfolio/templates/portfolio/index.html:22
+msgid ""
+"\n"
+"        Our Valued <span class=\"fw-bold\">Partners</span>\n"
+"        "
+msgstr ""
+"\n"
+"        저희의 소중한 <span class=\"fw-bold\">파트너들</span>입니다\n"
+"        "
+
+#: portfolio/templates/portfolio/index.html:26
+msgid "all"
+msgstr "전체"
+
+#: portfolio/templates/portfolio/index.html:27
+msgid "America"
+msgstr "미국"
+
+#: portfolio/templates/portfolio/index.html:28
+msgid "Asia"
+msgstr "아시아"
+
+#: portfolio/templates/portfolio/index.html:29
+msgid "Europe"
+msgstr "유럽"
+
+#: portfolio/templates/portfolio/index.html:51
+msgid "Numbers"
+msgstr "통계"
+
+#: portfolio/templates/portfolio/index.html:53
+msgid ""
+"\n"
+"          Here's Recap\n"
+"          "
+msgstr ""
+"\n"
+"          엠오벤처스에 관하여\n"
+"          "
+
+#: portfolio/templates/portfolio/index.html:69
+msgid "Raised<br/>(in billion)"
+msgstr "운용금액<br/>(10억)"
+
+#: portfolio/templates/portfolio/index.html:75
+msgid "Funds"
+msgstr "펀드 수"
+
+#: portfolio/templates/portfolio/index.html:80
+msgid "Established in"
+msgstr "설립년도"
+
+#: templates/404.html:17
+msgid "Sorry, page not found."
+msgstr "죄송합니다, 찾고자하는 페이지를 발견하지 못했습니다."
+
+#: templates/404.html:19 templates/404.html:21
+msgid "Go back to homepage"
+msgstr "홈페이지로 돌아가기"
+
+#: templates/500.html:17
+msgid "Server Error"
+msgstr "서버 오류"
+
+#: templates/base.html:19
+msgid ""
+"\n"
+"    <meta name=\"Description\" content=\"MO Ventures is a leading venture "
+"capital firm, empowering the next generation companies that will lead the "
+"world\">\n"
+"    "
+msgstr ""
+"\n"
+"    <meta name=\"Description\" content=\"엠오벤처스는 세계를 이끌 다음세대를 "
+"키우는 벤처캐피탈입니다.\">\n"
+"    "
+
+#: templates/base.html:39
+msgid "MO VENTURES"
+msgstr "엠오벤처스"
+
+#: templates/footer.html:8
+msgid "Headquarter"
+msgstr "본사"
+
+#: templates/footer.html:9
+msgid ""
+"\n"
+"        <h6>115, Gamcheonhang-ro 405beon-gil, Saha-gu, Busan, Republic of "
+"Korea</h6>\n"
+"        "
+msgstr ""
+"\n"
+"        <h6>부산시 사하구 감천항로 405번길 115(구평동)</h6>\n"
+"        "
+
+#: templates/footer.html:15
+msgid ""
+"\n"
+"        <h6>49, Gangnam-daero 37-gil, Seocho-gu, Seoul, Republic of Korea</"
+"h5>\n"
+"        <h6>Athenaeum Bulding 6fl</h6>\n"
+"        "
+msgstr ""
+"\n"
+"        <h6>서울시 서초구 강남대로 37길 49</h5>\n"
+"        <h6>애서니움 빌딩 6층</h6>\n"
+"        "
+
+#: templates/footer.html:30
+msgid "MO Ventures Co., Ltd."
+msgstr "엠오벤처스 주식회사"
+
+#: templates/footer.html:33
+msgid "Contact Us"
+msgstr "문의하기"
