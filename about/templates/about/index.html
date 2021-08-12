@@ -17,286 +17,295 @@
       color: blue !important;
     }
   }
+  body {
+    background-color: rgba(215, 225, 236, 1);
+  }
 </style>
 {% endblock style %}
 
 {% block body %}
-<div data-bottom-top="background-color: rgba(255, 255, 255, 1)" data-center-center="background-color: rgba(215, 225, 236, 1)" data-top-bottom="background-color: rgba(255, 255, 255, 1)">
-  <section class="py-15 py-xl-20 pb-xl-15">
-    <div class="container mt-5">
-      <h1 class="fw-light">
-        {% blocktrans %}
-        We are <br/>
-        <span class="fw-bold" data-typed='{"strings": ["Venture Capital.", "Private Equity.", "Consulting Firm."]}'></span>
-        {% endblocktrans %}
-      </h1>
+<section class="py-15 py-xl-20 pb-xl-15">
+  <div class="container mt-5">
+    <h1 class="fw-light">
+      {% blocktrans %}
+      We are <br/>
+      <span class="fw-bold" data-typed='{"strings": ["Venture Capital.", "Private Equity.", "Consulting Firm."]}'></span>
+      {% endblocktrans %}
+    </h1>
+  </div>
+</section>
+<section class="mb-10" data-aos="fade-up" data-aos-delay="150">
+  <div class="container">
+    <div class="row g-0 bg-white">
+      <div class="col-lg-6 p-4 p-md-10 order-lg-2">
+        <h3 class="fw-bold">{% trans "Venture Capital" %}</h3>
+        <p class="fs-lg text-secondary">
+          {% blocktrans %}
+          We are very privileged to invest in such great potential companies.
+          Our mission is to serve entrepreneurs and companies.
+          {% endblocktrans %}
+        </p>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="list-group list-group-minimal">
+              <li class="list-group-item">
+                <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                  <i class="bi bi-check2 text-primary"></i>
+                </div>
+                {% trans "Fund Raising" %}
+              </li>
+              <li class="list-group-item">
+                <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                  <i class="bi bi-check2 text-primary"></i>
+                </div>
+                {% trans "Invest in Startups and Pre-IPO Companies" %}
+              </li>
+              <li class="list-group-item">
+                <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                  <i class="bi bi-check2 text-primary"></i>
+                </div>
+                {% trans "Post Management" %}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1 position-relative">
+        <span class="background" style="background-image: url({% static 'images/venture-capital.jpg' %})"></span>
+      </div>
     </div>
-  </section>
-  <section class="mb-10" data-aos="fade-up" data-aos-delay="150">
-    <div class="container">
-      <div class="row g-0 bg-white">
-        <div class="col-lg-6 p-4 p-md-10 order-lg-2">
-          <h3 class="fw-bold">{% trans "Venture Capital" %}</h3>
-          <p class="fs-lg text-secondary">
+  </div>
+</section>
+<section class="mb-10" data-aos="fade-up" data-aos-delay="150">
+  <div class="container">
+    <div class="row g-0 bg-white">
+      <div class="col-lg-6 order-lg-2 position-relative">
+        <span class="background" style="background-image: url({% static 'images/private-equity.jpg' }%})"></span>
+      </div>
+      <div class="col-lg-6 p-4 p-md-10 order-lg-1">
+        <h3 class="fw-bold">{% trans "Private Equity" %}</h3>
+        <p class="fs-lg text-secondary">
+          {% blocktrans %}
+          As a private Equity, we strive to satisfy our investors with profits. 
+          We actively engage in operations and improve the valuation of the company significantly.
+          {% endblocktrans %}
+        </p>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="list-group list-group-minimal">
+              <li class="list-group-item">
+                <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                  <i class="bi bi-check2 text-primary"></i>
+                </div>
+                {% trans "Fund Raising" %}
+              </li>
+              <li class="list-group-item">
+                <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                  <i class="bi bi-check2 text-primary"></i>
+                </div>
+                M&amp;A
+              </li>
+              <li class="list-group-item">
+                <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                  <i class="bi bi-check2 text-primary"></i>
+                </div>
+                {% trans "Buyout and Management" %}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mb-10" data-aos="fade-up" data-aos-delay="150">
+  <div class="container">
+    <div class="row g-0 bg-white">
+      <div class="col-lg-6 p-4 p-md-10 order-lg-2">
+        <h3 class="fw-bold">{% trans "Consulting" %}</h3>
+        <p class="fs-lg text-secondary">
+          {% blocktrans %}
+          We take a consistent approach to help companies with better solutions.
+          Our consultants are in every field and ready to serve you regardless of your field, location, or difficulties.
+          {% endblocktrans %}
+        </p>
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="list-group list-group-minimal">
+              <li class="list-group-item">
+                <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                  <i class="bi bi-check2 text-primary"></i>
+                </div>
+                {% trans "Provide Networking" %}
+              </li>
+              <li class="list-group-item">
+                <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                  <i class="bi bi-check2 text-primary"></i>
+                </div>
+                {% trans "Provide Cash Flow Solutions" %}
+              </li>
+              <li class="list-group-item">
+                <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
+                  <i class="bi bi-check2 text-primary"></i>
+                </div>
+                {% trans "Provide Exit Strategy" %}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 order-lg-1 position-relative">
+        <span class="background" style="background-image: url({% static 'images/consulting.jpg' %})"></span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-15 py-xl-20">
+  <div class="container">
+    <div class="row justify-content-center mb-10">
+      <div class="col-lg-6 text-center">
+        <h2 class="fw-light">
+          {% blocktrans %}
+          How we are
+          <span class="fw-bold">different.</span>
+          {% endblocktrans %}
+        </h2>
+      </div>
+    </div>
+    <div class="row g-3 g-xl-5">
+      <div class="col-lg-4" data-aos="fade-up">
+        <div class="card bg-opaque-green">
+          <div class="card-header">
+            <i class="bi bi-award fs-2"></i>
+          </div>
+          <div class="card-footer">
+            <h3 class="fs-5">{% trans "Experience" %}</h3>
+            <p class="text-secondary">
+              {% blocktrans %}
+              Our team is composed of exceptionally talented and experienced people. 
+              Each member has deep expertise in one's field with integrity, creativity, and independent thinking.
+              {% endblocktrans %}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card bg-opaque-green">
+          <div class="card-header">
+            <i class="bi bi-layers fs-2"></i>
+          </div>
+          <div class="card-footer">
+            <h3 class="fs-5">{% trans "Strategy" %}</h3>
+            <p class="text-secondary">
+              {% blocktrans %}
+              Based on our experiences, we provide a client with the most efficient and low-risk strategies.
+              We are highly sensitive to economic conditions and periodically adjust strategy if necessary.
+              {% endblocktrans %}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card bg-opaque-green">
+          <div class="card-header">
+            <i class="bi bi-people fs-2"></i>
+          </div>
+          <div class="card-footer">
+            <h3 class="fs-5">{% trans "Networking" %}</h3>
+            <p class="text-secondary">
+              {% blocktrans %}
+              We have recognized that networking is power in terms of business. 
+              Therefore, we have partnered with global networks of colleagues, companies, and institutions to provide a better quality of services.
+              {% endblocktrans %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-15 py-xl-20">
+  <div class="container">
+    <div class="row mb-10">
+      <div class="col">
+        <h2 class="fw-bold">{% trans "Our Philosophy" %}</h2>
+      </div>
+    </div>
+    <div class="row g-3 g-xl-5 justify-content-between">
+      <div class="col-xl-4">
+        <ul class="nav nav-tabs flex-xl-column" id="component-1" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link fs-5 active" id="tab component-1-1-tab" data-bs-toggle="pill" data-bs-target="#component-1-1" type="button" role="tab" aria-controls="component-1-1" aria-selected="true">{% trans "Transparent" %}</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link fs-5" id="tab component-1-2-tab" data-bs-toggle="pill" data-bs-target="#component-1-2" type="button" role="tab" aria-controls="component-1-2" aria-selected="false">{% trans "Founder-Led" %}</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link fs-5" id="tab component-1-3-tab" data-bs-toggle="pill" data-bs-target="#component-1-3" type="button" role="tab" aria-controls="component-1-3" aria-selected="false">{% trans "Sustainable" %}</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link fs-5" id="tab component-1-4-tab" data-bs-toggle="pill" data-bs-target="#component-1-4" type="button" role="tab" aria-controls="component-1-4" aria-selected="false">{% trans "Socially Responsible" %}</button>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xl-8">
+        <div class="tab-content" id="component-1-content">
+          <div class="tab-pane fade show active" id="component-1-1" role="tabpanel" aria-labelledby="component-1-1-tab">
+            <h5>{% trans "Maintain transparency and everything else will follow" %}</h5>
+            <p>
             {% blocktrans %}
-            We are very privileged to invest in such great potential companies.
-            Our mission is to serve entrepreneurs and companies.
+            Our ultimate purpose is to bring positive impacts to our clients, our stakeholders, and our partners. 
+            The profit we generate is derived from investing in startups and from offering counseling services to our clients. 
+            To ensure that our purpose to be achieved, we need to evaluate every company thoroughly. 
+            Evaluation is never an easy journey, and promising startups do not always have a good ending, but a lack of transparency even makes it worse. 
+            It distracts our eyes and keeps us from unleashing the true potential of our clients. 
+            Therefore, We require our clients to be as transparent as possible to make their dream true and make the impossible possible.
             {% endblocktrans %}
-          </p>
-          <div class="row">
-            <div class="col-md-12">
-              <ul class="list-group list-group-minimal">
-                <li class="list-group-item">
-                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
-                    <i class="bi bi-check2 text-primary"></i>
-                  </div>
-                  {% trans "Fund Raising" %}
-                </li>
-                <li class="list-group-item">
-                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
-                    <i class="bi bi-check2 text-primary"></i>
-                  </div>
-                  {% trans "Invest in Startups and Pre-IPO Companies" %}
-                </li>
-                <li class="list-group-item">
-                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
-                    <i class="bi bi-check2 text-primary"></i>
-                  </div>
-                  {% trans "Post Management" %}
-                </li>
-              </ul>
-            </div>
+            </p>
           </div>
-        </div>
-        <div class="col-lg-6 order-lg-1 position-relative">
-          <span class="background" style="background-image: url({% static 'images/venture-capital.jpg' %})"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="mb-10" data-aos="fade-up" data-aos-delay="150">
-    <div class="container">
-      <div class="row g-0 bg-white">
-        <div class="col-lg-6 order-lg-2 position-relative">
-          <span class="background" style="background-image: url({% static 'images/private-equity.jpg' }%})"></span>
-        </div>
-        <div class="col-lg-6 p-4 p-md-10 order-lg-1">
-          <h3 class="fw-bold">{% trans "Private Equity" %}</h3>
-          <p class="fs-lg text-secondary">
+          <div class="tab-pane fade" id="component-1-2" role="tabpanel" aria-labelledby="component-1-2-tab">
+            <h5>{% trans "Great companies start with great leaders." %}</h5>
+            <p>
             {% blocktrans %}
-            As a private Equity, we strive to satisfy our investors with profits. 
-            We actively engage in operations and improve the valuation of the company significantly.
+            Founder-led companies outperform the rest. 
+            The most world's largest companies have been founded and run by founders. 
+            And the influence of the founders is surprisingly powerful and lasts for a long time. 
+            Depends on the founders' entrepreneurship and leadership, any failing company can succeed, and any scalable company can fail. 
+            We, therefore, have high expectations of founders in terms of investment. 
+            We expect founders to have a vision for the future, enthusiasm for creating value, and strong fundamentals of business. 
             {% endblocktrans %}
-          </p>
-          <div class="row">
-            <div class="col-md-12">
-              <ul class="list-group list-group-minimal">
-                <li class="list-group-item">
-                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
-                    <i class="bi bi-check2 text-primary"></i>
-                  </div>
-                  {% trans "Fund Raising" %}
-                </li>
-                <li class="list-group-item">
-                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
-                    <i class="bi bi-check2 text-primary"></i>
-                  </div>
-                  M&amp;A
-                </li>
-                <li class="list-group-item">
-                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
-                    <i class="bi bi-check2 text-primary"></i>
-                  </div>
-                  {% trans "Buyout and Management" %}
-                </li>
-              </ul>
-            </div>
+            </p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="mb-10" data-aos="fade-up" data-aos-delay="150">
-    <div class="container">
-      <div class="row g-0 bg-white">
-        <div class="col-lg-6 p-4 p-md-10 order-lg-2">
-          <h3 class="fw-bold">{% trans "Consulting" %}</h3>
-          <p class="fs-lg text-secondary">
+          <div class="tab-pane fade" id="component-1-3" role="tabpanel" aria-labelledby="component-1-3-tab">
+            <h5>{% trans "Environmental sustainablity is part of our mission." %}</h5>
+            <p>
             {% blocktrans %}
-            We take a consistent approach to help companies with better solutions.
-            Our consultants are in every field and ready to serve you regardless of your field, location, or difficulties.
+            Climate change is one of the greatest threats of our time, putting everyone's life at risk. 
+            We are well aware of the urgency of climate change and the need for decisive actions. 
+            To save our planet, we remain committed to our mission: scale up investments in sustainable startups. 
+            Every investment we make will have a critical measurement of energy efficiency. 
+            This does not necessarily limit our investment range or opportunities. 
+            We have a firm belief that well-designed products have a lower environmental footprint as well. 
+            We also hope our continual effort with environmental conservation motivates others to join us.
             {% endblocktrans %}
-          </p>
-          <div class="row">
-            <div class="col-md-12">
-              <ul class="list-group list-group-minimal">
-                <li class="list-group-item">
-                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
-                    <i class="bi bi-check2 text-primary"></i>
-                  </div>
-                  {% trans "Provide Networking" %}
-                </li>
-                <li class="list-group-item">
-                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
-                    <i class="bi bi-check2 text-primary"></i>
-                  </div>
-                  {% trans "Provide Cash Flow Solutions" %}
-                </li>
-                <li class="list-group-item">
-                  <div class="icon-box icon-box-sm bg-opaque-primary rounded-circle me-1">
-                    <i class="bi bi-check2 text-primary"></i>
-                  </div>
-                  {% trans "Provide Exit Strategy" %}
-                </li>
-              </ul>
-            </div>
+            </p>
           </div>
-        </div>
-        <div class="col-lg-6 order-lg-1 position-relative">
-          <span class="background" style="background-image: url({% static 'images/consulting.jpg' %})"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="py-15 py-xl-20">
-    <div class="container">
-      <div class="row justify-content-center mb-10">
-        <div class="col-lg-6 text-center">
-          <h2 class="fw-light">
+          <div class="tab-pane fade" id="component-1-4" role="tabpanel" aria-labelledby="component-1-4-tab">
+            <h5>{% trans "Success always takes help." %}</h5>
+            <p>
             {% blocktrans %}
-            How we are
-            <span class="fw-bold">different.</span>
+            Before we begin, we would like to quote Melinda Gates: 
+            "If you are successful, it is because somewhere, sometime, someone gave you a life or an idea that started you in the right direction."
+            We do investment, but seed money does not come out of nowhere. 
+            We also get invested by limited partners who are willing to join our wills. 
+            Our job is to make the flow of money, scale up businesses, and innovate the world. 
+            Therefore, to accelerate the flow of money, we expect our partners to do the same thing: take social responsibility and benefit society to make the world a better place.
             {% endblocktrans %}
-          </h2>
-        </div>
-      </div>
-      <div class="row g-3 g-xl-5">
-        <div class="col-lg-4" data-aos="fade-up">
-          <div class="card bg-opaque-green">
-            <div class="card-header">
-              <i class="bi bi-award fs-2"></i>
-            </div>
-            <div class="card-footer">
-              <h3 class="fs-5">{% trans "Experience" %}</h3>
-              <p class="text-secondary">
-                {% blocktrans %}
-                Our team is composed of exceptionally talented and experienced people. 
-                Each member has deep expertise in one's field with integrity, creativity, and independent thinking.
-                {% endblocktrans %}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card bg-opaque-green">
-            <div class="card-header">
-              <i class="bi bi-layers fs-2"></i>
-            </div>
-            <div class="card-footer">
-              <h3 class="fs-5">{% trans "Strategy" %}</h3>
-              <p class="text-secondary">
-                {% blocktrans %}
-                Based on our experiences, we provide a client with the most efficient and low-risk strategies.
-                We are highly sensitive to economic conditions and periodically adjust strategy if necessary.
-                {% endblocktrans %}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card bg-opaque-green">
-            <div class="card-header">
-              <i class="bi bi-people fs-2"></i>
-            </div>
-            <div class="card-footer">
-              <h3 class="fs-5">{% trans "Networking" %}</h3>
-              <p class="text-secondary">
-                {% blocktrans %}
-                We have recognized that networking is power in terms of business. 
-                Therefore, we have partnered with global networks of colleagues, companies, and institutions to provide a better quality of services.
-                {% endblocktrans %}
-              </p>
-            </div>
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <section class="py-15 py-xl-20">
-    <div class="container">
-      <div class="row mb-10">
-        <div class="col">
-          <h2 class="fw-bold">{% trans "Our Philosophy" %}</h2>
-        </div>
-      </div>
-      <div class="row g-3 g-xl-5 justify-content-between">
-        <div class="col-xl-4">
-          <ul class="nav nav-tabs flex-xl-column" id="component-1" role="tablist">
-            <li class="nav-item">
-              <button class="nav-link fs-5 active" id="tab component-1-1-tab" data-bs-toggle="pill" data-bs-target="#component-1-1" type="button" role="tab" aria-controls="component-1-1" aria-selected="true">{% trans "Transparency" %}</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link fs-5" id="tab component-1-2-tab" data-bs-toggle="pill" data-bs-target="#component-1-2" type="button" role="tab" aria-controls="component-1-2" aria-selected="false">{% trans "Founder" %}</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link fs-5" id="tab component-1-3-tab" data-bs-toggle="pill" data-bs-target="#component-1-3" type="button" role="tab" aria-controls="component-1-3" aria-selected="false">{% trans "Sustainable" %}</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link fs-5" id="tab component-1-4-tab" data-bs-toggle="pill" data-bs-target="#component-1-4" type="button" role="tab" aria-controls="component-1-4" aria-selected="false">{% trans "Socially Responsible" %}</button>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link fs-5" id="tab component-1-5-tab" data-bs-toggle="pill" data-bs-target="#component-1-5" type="button" role="tab" aria-controls="component-1-5" aria-selected="false">{% trans "Profitable" %}</button>
-            </li>
-          </ul>
-        </div>
-        <div class="col-xl-8">
-          <div class="tab-content" id="component-1-content">
-            <div class="tab-pane fade show active" id="component-1-1" role="tabpanel" aria-labelledby="component-1-1-tab">
-              <h5>{% trans "" %}</h5>
-              <p>
-              {% blocktrans %}
-
-              {% endblocktrans %}
-              </p>
-            </div>
-            <div class="tab-pane fade" id="component-1-2" role="tabpanel" aria-labelledby="component-1-2-tab">
-              <h5>{% trans "" %}</h5>
-              <p>
-              {% blocktrans %}
-
-              {% endblocktrans %}
-              </p>
-            </div>
-            <div class="tab-pane fade" id="component-1-3" role="tabpanel" aria-labelledby="component-1-3-tab">
-              <h5>{% trans "Environmental sustainablity is part of our purpose, mission, and practices." %}</h5>
-              <p>
-              {% blocktrans %}
-              Environmental sustainablity is 
-              Our investment decision is reliant on the company's environmental sustainablity.
-              Developing solutions to global challenges is never an easy journey
-              {% endblocktrans %}
-              </p>
-            </div>
-            <div class="tab-pane fade" id="component-1-4" role="tabpanel" aria-labelledby="component-1-4-tab">
-              <h5>{% trans "Fourth tab content here .." %}</h5>
-              <p>
-              {% blocktrans %}
-
-              {% endblocktrans %}
-              </p>
-            </div>
-            <div class="tab-pane fade" id="component-1-4" role="tabpanel" aria-labelledby="component-1-4-tab">
-              <h5>{% trans "Fourth tab content here .." %}</h5>
-              <p>
-              {% blocktrans %}
-
-              {% endblocktrans %}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+  </div>
+</section>
 {% endblock body %}
