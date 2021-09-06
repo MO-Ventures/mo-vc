@@ -12,28 +12,23 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-import json
-from google.oauth2 import service_account
 
+from decouple import config
+from google.oauth2 import service_account
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-SECRET_PATH = BASE_DIR / 'secrets.json'
-
-SECRETS = json.load(open(SECRET_PATH))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = SECRETS['DJANGO_SECRET_KEY']
+SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False) == 'True'
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -106,10 +101,10 @@ if not DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'HOST': SECRETS['DB_HOST'],
-            'NAME': SECRETS['DB_NAME'],
-            'USER': SECRETS['DB_USER'],
-            'PASSWORD': SECRETS['DB_PASSWORD']
+            'HOST': config('DB_HOST'),
+            'NAME': config('DB_NAME'),
+            'USER': config('DB_USER'),
+            'PASSWORD': config('DB_PASSWORD')
         }
     }
 
@@ -158,8 +153,8 @@ LOCALE_PATHS = [ BASE_DIR / 'locale' ]
 STATICFILES_DIRS = [ BASE_DIR / 'static' ]
 
 if not DEBUG:
-    GS_BUCKET_NAME = SECRETS['GS_BUCKET_NAME']
-    GS_PROJECT_ID = SECRETS['GS_PROJECT_ID']
+    GS_BUCKET_NAME = config('GS_BUCKET_NAME')
+    GS_PROJECT_ID = config('GS_PROJECT_ID')
     GS_CREDENTIALS = service_account.Credentials.from_service_account_file(BASE_DIR / 'google_credentials.json')
     GS_LOCATION = 'static'
     GS_DEFAULT_ACL = 'publicRead'
