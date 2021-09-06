@@ -7,9 +7,9 @@ class Region(models.TextChoices):
 
 # Create your models here.
 class Company(models.Model):
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=60)
     region = models.CharField(max_length=30, choices=Region.choices, default=Region.Asia)
-    url = models.URLField(max_length=30)
+    url = models.URLField(max_length=60)
     image = models.ImageField(upload_to="company")
 
     class Meta:
