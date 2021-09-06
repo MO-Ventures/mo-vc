@@ -15,7 +15,7 @@ class Employee(SortableMixin):
     name = models.CharField(max_length=20)
     sector = models.CharField(max_length=20, choices=Sector.choices, default=Sector.VC)
     sector2 = models.CharField(max_length=20, choices=Sector.choices, blank=True)
-    position = models.CharField(max_length=20)
+    position = models.CharField(max_length=60)
     photo = models.ImageField(upload_to='people/profile_pics')
     description = HTMLField('description')
 
