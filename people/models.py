@@ -8,7 +8,7 @@ class Sector(models.TextChoices):
     VC = 'VC', 'VC'
     PE = 'PE', 'PE'
     Management = 'Management', 'Management'
-    Advisory_board = 'Advisory Board', 'Advisory_Board'
+    Advisory_board = 'Advisory_Board', 'Advisory_Board'
 
 class Employee(SortableMixin):
     the_order = models.PositiveIntegerField(default=0, editable=False, db_index=True)

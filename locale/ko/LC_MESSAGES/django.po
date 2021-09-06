@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-12 20:30+0900\n"
+"POT-Creation-Date: 2021-09-06 17:02+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -344,19 +344,19 @@ msgstr ""
 "지고 사회에게 긍정적인 영향을 가져와 좀 더 나은 세상을 만드는것입니"
 "다.            "
 
-#: contact/templates/contact/index.html:12
+#: contact/templates/contact/index.html:27
 msgid "Contact"
 msgstr "연락처"
 
-#: contact/templates/contact/index.html:17
+#: contact/templates/contact/index.html:32
 msgid "Email"
 msgstr "이메일"
 
-#: contact/templates/contact/index.html:21
+#: contact/templates/contact/index.html:36
 msgid "Phone"
 msgstr "번호"
 
-#: contact/templates/contact/index.html:32 templates/footer.html:14
+#: contact/templates/contact/index.html:47 templates/footer.html:14
 msgid "Seoul Office"
 msgstr "서울 사무소"
 
@@ -449,17 +449,21 @@ msgstr ""
 "다.</h1>\n"
 "        "
 
-#: people/templates/people/index.html:55
+#: people/templates/people/index.html:56
 msgid "Our People"
 msgstr "저희의 소중한 사람들입니다."
 
-#: people/templates/people/index.html:69
+#: people/templates/people/index.html:70
 msgid "Leadership"
 msgstr "리더쉽"
 
-#: people/templates/people/index.html:72
+#: people/templates/people/index.html:73
 msgid "Management"
 msgstr "경영관리본부"
+
+#: people/templates/people/index.html:74
+msgid "Advisory Board"
+msgstr "자문위원단"
 
 #: portfolio/templates/portfolio/index.html:10
 msgid "Passion Combined With Experience."
