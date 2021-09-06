@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% load static %}
 {% load i18n %}
+
+{% block style %}
+<style>
+.card-main {
+  max-width: 250px;
+}
+</style>
+{% endblock style %}
+
 {% block body %}
 <div class="offcanvas-wrap">
 <section class="py-15 py-xl-20 overflow-hidden bg-black inverted">
@@ -31,7 +40,7 @@
   </div>
   <div class="row g-3 g-xl-5" id="grid1" data-aos="fade-up" data-isotope>
     {% for company in object_list %}
-    <div class="col-6 col-lg-4 {{ company.region }}">
+    <div class="card-main col-6 col-lg-4 {{ company.region }}">
       <article class="card card-hover-image-rise">
         <a href="{{ company.url }}" target="_blank" title="{{ company.name }}">
         <img src="{{ company.image.url }}" class="card-img-top shadow-sm" alt="{{ company.name }}">
