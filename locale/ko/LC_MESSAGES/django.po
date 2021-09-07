@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-06 17:02+0900\n"
+"POT-Creation-Date: 2021-09-07 17:21+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -405,7 +405,7 @@ msgid "Proverb"
 msgstr "잠언"
 
 #: home/templates/home/index.html:73
-#: portfolio/templates/portfolio/index.html:63 templates/base.html:94
+#: portfolio/templates/portfolio/index.html:72 templates/base.html:94
 msgid "People"
 msgstr "사람들"
 
@@ -453,23 +453,27 @@ msgstr ""
 msgid "Our People"
 msgstr "저희의 소중한 사람들입니다."
 
-#: people/templates/people/index.html:70
+#: people/templates/people/index.html:62
+msgid "All"
+msgstr "전체"
+
+#: people/templates/people/index.html:63
 msgid "Leadership"
 msgstr "리더쉽"
 
-#: people/templates/people/index.html:73
+#: people/templates/people/index.html:66
 msgid "Management"
 msgstr "경영관리본부"
 
-#: people/templates/people/index.html:74
-msgid "Advisory Board"
-msgstr "자문위원단"
+#: people/templates/people/index.html:92
+msgid "Our Advisory Board"
+msgstr "저희의 자문위원단 입니다."
 
-#: portfolio/templates/portfolio/index.html:10
+#: portfolio/templates/portfolio/index.html:19
 msgid "Passion Combined With Experience."
 msgstr "열정에 엠오벤처스의 경험을 <br/>더했습니다"
 
-#: portfolio/templates/portfolio/index.html:22
+#: portfolio/templates/portfolio/index.html:31
 msgid ""
 "\n"
 "        Our Valued <span class=\"fw-bold\">Partners</span>\n"
@@ -479,27 +483,27 @@ msgstr ""
 "        저희의 소중한 <span class=\"fw-bold\">파트너들</span>입니다\n"
 "        "
 
-#: portfolio/templates/portfolio/index.html:26
+#: portfolio/templates/portfolio/index.html:35
 msgid "all"
 msgstr "전체"
 
-#: portfolio/templates/portfolio/index.html:27
+#: portfolio/templates/portfolio/index.html:36
 msgid "America"
 msgstr "미국"
 
-#: portfolio/templates/portfolio/index.html:28
+#: portfolio/templates/portfolio/index.html:37
 msgid "Asia"
 msgstr "아시아"
 
-#: portfolio/templates/portfolio/index.html:29
+#: portfolio/templates/portfolio/index.html:38
 msgid "Europe"
 msgstr "유럽"
 
-#: portfolio/templates/portfolio/index.html:51
+#: portfolio/templates/portfolio/index.html:60
 msgid "Numbers"
 msgstr "통계"
 
-#: portfolio/templates/portfolio/index.html:53
+#: portfolio/templates/portfolio/index.html:62
 msgid ""
 "\n"
 "          Here's Recap\n"
@@ -509,15 +513,15 @@ msgstr ""
 "          엠오벤처스에 관하여\n"
 "          "
 
-#: portfolio/templates/portfolio/index.html:69
+#: portfolio/templates/portfolio/index.html:78
 msgid "Raised<br/>(in billion)"
 msgstr "운용금액<br/>(10억)"
 
-#: portfolio/templates/portfolio/index.html:75
+#: portfolio/templates/portfolio/index.html:84
 msgid "Funds"
 msgstr "펀드 수"
 
-#: portfolio/templates/portfolio/index.html:80
+#: portfolio/templates/portfolio/index.html:89
 msgid "Established in"
 msgstr "설립년도"
 

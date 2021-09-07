@@ -49,7 +49,7 @@
 
 {% block body %}
 <div class="offcanvas-wrap">
-<section class="py-15 py-xl-20 bg-light overflow-hidden">
+<section class="pt-15 pt-xl-20 pb-10 pb-xl-15 bg-light overflow-hidden border-bottom">
   <div class="container">
     <div class="row mb-5">
       <div class="col-lg-8">
@@ -57,62 +57,81 @@
       </div>
     </div>
     <div class="mb-5 col-12">
-      {% comment %} <button class="btn btn-filter rounded-pill current" data-filter="*" data-target="#grid1">{% trans "all" %}</button>
-      <button class="btn btn-filter rounded-pill m-1" data-filter=".Leadership" data-target="#grid1">{% trans "Leadership" %}</button>
-      <button class="btn btn-filter rounded-pill m-1" data-filter=".VC" data-target="#grid1">VC</button>
-      <button class="btn btn-filter rounded-pill m-1" data-filter=".PE" data-target="#grid1">PE</button>
-      <button class="btn btn-filter rounded-pill m-1" data-filter=".Management" data-target="#grid1">{% trans "Management" %}</button>
-      <button class="btn btn-filter rounded-pill m-1" data-filter=".Advisory_Board" data-target="#grid1">{% trans "Advisory Board" %}</button> {% endcomment %}
       <nav aria-label="breadcrumb" class="mt-2">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item active"><a href="#" data-filter="*" data-target="#grid1">All</a></li>
+          <li class="breadcrumb-item active"><a href="#" data-filter="*" data-target="#grid1">{% trans "All" %}</a></li>
           <li class="breadcrumb-item"><a href="#" data-filter=".Leadership" data-target="#grid1">{% trans "Leadership" %}</a></li>
           <li class="breadcrumb-item"><a href="#" data-filter=".VC" data-target="#grid1">VC</a></li>
           <li class="breadcrumb-item"><a href="#" data-filter=".PE" data-target="#grid1">PE</a></li>
           <li class="breadcrumb-item"><a href="#" data-filter=".Management" data-target="#grid1">{% trans "Management" %}</a></li>
-          <li class="breadcrumb-item"><a href="#" data-filter=".Advisory_Board" data-target="#grid1">{% trans "Advisory Board" %}</a></li>
         </ol>
       </nav>
     </div>
     <div class="row g-3 g-xl-5" id="grid1" data-isotope>
-    {% for people in object_list %}
-      <div class="col-6 col-md-4 col-lg-3 {{ people.sector }} {{ people.sector2 }}" data-bs-toggle="modal" data-bs-target="#peopleModal-{{ forloop.counter }}" style="cursor: pointer;">
+    {% for p in people %}
+      <div class="col-6 col-md-4 col-lg-3 {{ p.sector }} {{ p.sector2 }}" data-bs-toggle="modal" data-bs-target="#peopleModal-{{ p.id }}" style="cursor: pointer;">
         <div class="card">
           <div class="equal-1-1 mb-2 card-hover-border">
-            <figure class="background" style="background-image: url({{ people.photo.url }});">
+            <figure class="background" style="background-image: url({{ p.photo.url }});">
             </figure>
           </div>
-          <h4 class="card-title">{{ people.name }}</h4>
-          <span class="text-secondary">{{ people.position }}</span>
+          <h4 class="card-title">{{ p.name }}</h4>
+          <span class="text-secondary">{{ p.position }}</span>
         </div>
       </div>
     {% endfor %}
     </div>
   </div>
-  {% for people in object_list %}
-  <div class="modal fade" id="peopleModal-{{ forloop.counter }}" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-    <div class="modal-xl modal-dialog modal-dialog-centered modal-fullscreen-lg-down" id="modal-frame">
-      <div class="modal-content">
-        <button type="button" class="bi bi-x modal-close btn-close text-black" data-bs-dismiss="modal"
-          aria-label="Close"></button>
-        <div id="modal-inside" class="row h-100 modal-body">
-          <div id="modal-image" class="col-lg-6 d-flex align-items-center justify-content-center">
-            <img id="profile_pics" class="w-auto h-auto mw-100 mh-100 img-fluid" src="{{ people.photo.url }}">
+</section>
+
+<div class="offcanvas-wrap">
+<section class="py-10 py-xl-15 bg-light overflow-hidden">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-8">
+        <h2>{% trans "Our Advisory Board" %}</h2>
+      </div>
+    </div>
+    <div class="row g-3 g-xl-5" id="grid1" data-isotope>
+    {% for p in advisory_board %}
+      <div class="col-6 col-md-4 col-lg-3 {{ p.sector }} {{ p.sector2 }}" data-bs-toggle="modal" data-bs-target="#peopleModal-{{ p.id }}" style="cursor: pointer;">
+        <div class="card">
+          <div class="equal-1-1 mb-2 card-hover-border">
+            <figure class="background" style="background-image: url({{ p.photo.url }});">
+            </figure>
           </div>
-          <div id="modal-text" class="h-100 col-lg-6">
-            <h3 id="modalLabel">{{ people.name }}</h3>
-            <p id="modalDescription">
-            {% autoescape off %}
-            {{ people.description }}
-            {% endautoescape %}
-            </p>
-          </div>
+          <h4 class="card-title">{{ p.name }}</h4>
+          <span class="text-secondary">{{ p.position }}</span>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% for p in object_list %}
+<div class="modal fade" id="peopleModal-{{ p.id }}" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-xl modal-dialog modal-dialog-centered modal-fullscreen-lg-down" id="modal-frame">
+    <div class="modal-content">
+      <button type="button" class="bi bi-x modal-close btn-close text-black" data-bs-dismiss="modal"
+        aria-label="Close"></button>
+      <div id="modal-inside" class="row h-100 modal-body">
+        <div id="modal-image" class="col-lg-6 d-flex align-items-center justify-content-center">
+          <img id="profile_pics" class="w-auto h-auto mw-100 mh-100 img-fluid" src="{{ p.photo.url }}">
+        </div>
+        <div id="modal-text" class="h-100 col-lg-6">
+          <h3 id="modalLabel">{{ p.name }}</h3>
+          <p id="modalDescription">
+          {% autoescape off %}
+          {{ p.description }}
+          {% endautoescape %}
+          </p>
         </div>
       </div>
     </div>
   </div>
-  {% endfor %}
-</section>
+</div>
+{% endfor %}
 {% endblock %}
 
 {% block javascript %}
