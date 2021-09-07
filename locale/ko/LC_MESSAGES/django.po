@@ -451,7 +451,7 @@ msgstr ""
 
 #: people/templates/people/index.html:56
 msgid "Our People"
-msgstr "저희의 소중한 사람들입니다."
+msgstr "우리의 소중한 사람들입니다."
 
 #: people/templates/people/index.html:62
 msgid "All"
@@ -467,7 +467,7 @@ msgstr "경영관리본부"
 
 #: people/templates/people/index.html:92
 msgid "Our Advisory Board"
-msgstr "저희의 자문위원단 입니다."
+msgstr "우리의 자문위원단 입니다."
 
 #: portfolio/templates/portfolio/index.html:19
 msgid "Passion Combined With Experience."
