@@ -214,7 +214,7 @@ msgstr "사회책임적"
 
 #: about/templates/about/index.html:254
 msgid "Maintain transparency and everything else will follow"
-msgstr "투명성이 모든것을 해결해준다"
+msgstr "투명성, 투명성, 투명성"
 
 #: about/templates/about/index.html:256
 msgid ""
