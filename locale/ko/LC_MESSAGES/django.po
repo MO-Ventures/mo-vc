@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-07 17:21+0900\n"
+"POT-Creation-Date: 2021-10-05 22:38+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -344,6 +344,181 @@ msgstr ""
 "지고 사회에게 긍정적인 영향을 가져와 좀 더 나은 세상을 만드는것입니"
 "다.            "
 
+#: apply/templates/apply/investment.html:23
+msgid "You do your job<br/>We got your back."
+msgstr "당신의 꿈이<br/>제약받지 않도록."
+
+#: apply/templates/apply/investment.html:25
+msgid ""
+"\n"
+"        It is our privilege to know you.<br/> Please fill out this form and "
+"we will get in touch with you shortly.\n"
+"        "
+msgstr ""
+"\n"
+"        엠오벤처스에 연락주셔서 감사합니다.<br/>밑에 양식을 작성해주시면 저희"
+"가 검토하고 빠른 시일 내에 연락드리겠습니다.\n"
+"        "
+
+#: apply/templates/apply/investment.html:38
+#: apply/templates/apply/investment.html:39
+#: apply/templates/apply/partnership.html:38
+#: apply/templates/apply/partnership.html:39
+msgid "Your Name"
+msgstr "이름"
+
+#: apply/templates/apply/investment.html:41
+#: apply/templates/apply/partnership.html:41
+msgid "Please provide your name"
+msgstr "이름을 작성해주세요"
+
+#: apply/templates/apply/investment.html:45
+#: apply/templates/apply/investment.html:46
+#: apply/templates/apply/partnership.html:45
+#: apply/templates/apply/partnership.html:46
+msgid "Your Company"
+msgstr "회사"
+
+#: apply/templates/apply/investment.html:48
+#: apply/templates/apply/partnership.html:48
+msgid "Please provide your company name"
+msgstr "회사이름을 작성해주세요"
+
+#: apply/templates/apply/investment.html:52
+#: apply/templates/apply/investment.html:53
+#: apply/templates/apply/partnership.html:52
+#: apply/templates/apply/partnership.html:53
+msgid "Your Email"
+msgstr "이메일"
+
+#: apply/templates/apply/investment.html:55
+#: apply/templates/apply/partnership.html:55
+msgid "Please provide your email address"
+msgstr "이메일 주소를 작성해주세요"
+
+#: apply/templates/apply/investment.html:59
+#: apply/templates/apply/investment.html:60
+#: apply/templates/apply/partnership.html:59
+#: apply/templates/apply/partnership.html:60
+msgid "Your Phone Number"
+msgstr "휴대폰번호"
+
+#: apply/templates/apply/investment.html:62
+#: apply/templates/apply/partnership.html:62
+msgid "Please provide your phone number"
+msgstr "휴대폰번호를 작성해주세요"
+
+#: apply/templates/apply/investment.html:66
+msgid "Business Plan"
+msgstr "사업계획서"
+
+#: apply/templates/apply/investment.html:70
+msgid "Tell us about your company"
+msgstr "회사에 대해 소개해주세요"
+
+#: apply/templates/apply/investment.html:71
+#: apply/templates/apply/investment.html:78
+#: apply/templates/apply/investment.html:85
+msgid "Write Here"
+msgstr "여기에 작성하세요"
+
+#: apply/templates/apply/investment.html:73
+#: apply/templates/apply/investment.html:80
+#: apply/templates/apply/investment.html:87
+msgid "Please provide your thought"
+msgstr "위에 칸을 작성해주세요"
+
+#: apply/templates/apply/investment.html:77
+msgid "Tell us how you plan to use the funds"
+msgstr "투자금을 어떻게 사용할지 적어주세요"
+
+#: apply/templates/apply/investment.html:84
+msgid "Tell us about your exit strategy"
+msgstr "생각하고 계신 회수 전략에 대해 적어주세요"
+
+#: apply/templates/apply/investment.html:94
+#: apply/templates/apply/partnership.html:87
+msgid ""
+"\n"
+"                I acknowledge that my information will be used in accordance "
+"with <p class=\"text-blue underline\">Privacy Policy.</p>\n"
+"              "
+msgstr ""
+"\n"
+"                <p class=\"text-blue underline\">개인정보 수집</p>에 동의합니"
+"다.\n"
+"              "
+
+#: apply/templates/apply/investment.html:99
+#: apply/templates/apply/partnership.html:92
+msgid "You must agree before submitting."
+msgstr "제출하시기 전에 동의하셔야합니다."
+
+#: apply/templates/apply/investment.html:104
+#: apply/templates/apply/partnership.html:97
+msgid "Submit"
+msgstr "제출"
+
+#: apply/templates/apply/partnership.html:23
+msgid "Great partners bring <br/>great possibility"
+msgstr "파트너들의<br/>잠재력을<br/>키웁니다"
+
+#: apply/templates/apply/partnership.html:25
+msgid ""
+"\n"
+"        We would love to hear from you.<br/> Please fill out this form and "
+"we will get in touch with you shortly.\n"
+"        "
+msgstr ""
+"\n"
+"        엠오벤처스에 연락주셔서 감사합니다.<br/>밑에 양식을 작성해주시면 저희"
+"가 검토하고 빠른 시일 내에 연락드리겠습니다.\n"
+"        "
+
+#: apply/templates/apply/partnership.html:66
+#: apply/templates/apply/partnership.html:67
+msgid "Title"
+msgstr "제목"
+
+#: apply/templates/apply/partnership.html:69
+msgid "Please provide a title"
+msgstr "제목을 작성해주세요"
+
+#: apply/templates/apply/partnership.html:73
+#: apply/templates/apply/partnership.html:74
+msgid "Message"
+msgstr "내용"
+
+#: apply/templates/apply/partnership.html:76
+msgid "Please provide a message"
+msgstr "내용을 작성해주세요"
+
+#: apply/templates/apply/partnership.html:80
+msgid "Attatchment (Optional)"
+msgstr "첨부파일 (선택)"
+
+#: apply/templates/apply/success.html:25
+msgid "Hurray!"
+msgstr "제출 성공"
+
+#: apply/templates/apply/success.html:28
+msgid ""
+"\n"
+"        Thank you for getting in touch! We will contact you shortly.\n"
+"        "
+msgstr ""
+"\n"
+"        연락해주셔서 감사합니다! 검토하고 빠른 시일 내에 연락드리겠습니다.\n"
+"        "
+
+#: apply/views.py:63
+msgid "File Not Supported"
+msgstr "지원하지 않는 파일 형식입니다"
+
+#: apply/views.py:65
+msgid "The file is too large. Must be less than 20mb"
+msgstr "파일이 너무 큽니다. 25mb 파일만 지원합니다."
+
 #: contact/templates/contact/index.html:27
 msgid "Contact"
 msgstr "연락처"
@@ -436,6 +611,34 @@ msgstr "지식의 유일한 원천은 경험이다"
 #: home/templates/home/index.html:113
 msgid "Albert Einstein"
 msgstr "알버트 아인슈타인"
+
+#: home/templates/home/index.html:124
+msgid ""
+"\n"
+"                JOIN OUR <span class=\"fw-bold\">JOURNEY</span>\n"
+"                "
+msgstr ""
+"\n"
+"                우리 <span class=\"fw-bold\">여정에</span> 함께하기\n"
+"                "
+
+#: home/templates/home/index.html:128
+msgid "Partner with us"
+msgstr "협력/제휴 지원하기"
+
+#: home/templates/home/index.html:136
+msgid ""
+"\n"
+"                ACHIEVE <span class=\"fw-bold\">BIGGER</span>\n"
+"                "
+msgstr ""
+"\n"
+"                더 큰 <span class=\"fw-bold\">목표를</span> 위하여\n"
+"                "
+
+#: home/templates/home/index.html:140
+msgid "Apply for VC Funding"
+msgstr "투자제안서 제출하기"
 
 #: maintenance/templates/maintenance/index.html:11
 msgid ""

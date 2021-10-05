@@ -33,8 +33,7 @@ urlpatterns += i18n_patterns(
     path('portfolio/', include('portfolio.urls')),
     path('contact/', include('contact.urls')),
     path('experience/', include('maintenance.urls')),
-
-    # path('join/', include('join.urls')),
+    path('apply/', include('apply.urls')),
 
     prefix_default_language=False,
 )

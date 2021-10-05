@@ -1,6 +1,6 @@
 import os
 
-from decouple import config
+from movc.settings import config
 from django.shortcuts import render
 from django.views.generic import TemplateView
 
@@ -11,6 +11,6 @@ class ContactView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['navbar'] = 'text-black'
-        context["kakao_api_key"] = config('KAKAO_API_KEY')
+        context["kakao_api_key"] = config['kakao']['api_key']
         return context
     

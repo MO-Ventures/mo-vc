@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block style %}
+<style>
+@media only screen and (max-width: 992px) {
+  #menu {
+    color: white !important;
+  }
+  .nav-icon {
+    color: blue !important;
+  }
+}
+</style>
+{% endblock style %}
+
+{% block body %}
+<section class="py-15 py-xl-20 border-top">
+  <div class="container mt-10">
+    <div class="row justify-content-center mb-10">
+      <div class="col-lg-8 text-center">
+        <h1 class="mb-2">{% trans "You do your job<br/>We got your back." %}</h1>
+        <p class="fs-lg text-secondary">
+        {% blocktrans %}
+        It is our privilege to know you.<br/> Please fill out this form and we will get in touch with you shortly.
+        {% endblocktrans %}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <form onsubmit='removeSpinner()' method='post' enctype="multipart/form-data" action="." class="row g-3 needs-validation" novalidate>
+          {% csrf_token %}
+          <div class="col-md-6">
+            <label for="id_name" class="form-label">{% trans "Your Name" %}</label>
+            <input type="text" class="form-control" name="name" id="id_name" placeholder="{% trans 'Your Name' %}" required>
+            <div class="invalid-feedback">
+              {% trans "Please provide your name" %}
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="id_company" class="form-label">{% trans "Your Company" %}</label>
+            <input type="text" class="form-control" name="company" id="id_company" placeholder="{% trans 'Your Company'%}" required>
+            <div class="invalid-feedback">
+              {% trans "Please provide your company name" %}
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="id_email" class="form-label">{% trans "Your Email" %}</label>
+            <input type="email" class="form-control" name="email" id="id_email" placeholder="{% trans 'Your Email' %}" required>
+            <div class="invalid-feedback">
+              {% trans "Please provide your email address" %}
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="id_phone_number" class="form-label">{% trans "Your Phone Number" %}</label>
+            <input type="text" class="form-control" name="phone_number" id="id_phone_number" placeholder="{% trans 'Your Phone Number' %}" required>
+            <div class="invalid-feedback">
+              {% trans "Please provide your phone number" %}
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label for="id_file" class="form-label">{% trans "Business Plan" %}</label>
+            <input type="file" class="form-control" name="file" id="id_file">
+          </div>
+          <div class="col-md-12">
+            <label for="id_about_company" class="form-label">{% trans "Tell us about your company" %}</label>
+            <textarea class="form-control" name="about_company" id="id_about_company" rows="5" placeholder="{% trans 'Write Here' %}" maxlength="2000" required></textarea>
+            <div class="invalid-feedback">
+              {% trans "Please provide your thought" %}
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label for="id_about_fund" class="form-label">{% trans "Tell us how you plan to use the funds" %}</label>
+            <textarea class="form-control" name="about_fund" id="id_about_fund" rows="5" placeholder="{% trans 'Write Here' %}" maxlength="2000" required></textarea>
+            <div class="invalid-feedback">
+              {% trans "Please provide your thought" %}
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label for="id_exit_strategy" class="form-label">{% trans "Tell us about your exit strategy" %}</label>
+            <textarea class="form-control" name="exit_strategy" id="id_exit_strategy" rows="5" placeholder="{% trans 'Write Here' %}" maxlength="2000" required></textarea>
+            <div class="invalid-feedback">
+              {% trans "Please provide your thought" %}
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck" required>
+              <label class="form-check-label text-muted small" for="gridCheck">
+              {% blocktrans %}
+                I acknowledge that my information will be used in accordance with <p class="text-blue underline">Privacy Policy.</p>
+              {% endblocktrans %}
+              </label>
+              <div class="invalid-feedback">
+                {% trans "You must agree before submitting." %}
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <button class="btn btn-primary" type="submit">{% trans "Submit" %}</button>
+            <span id='spinner' class="spinner-grow text-primary visually-hidden" role="status"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}
+
+{% block javascript %}
+{{ upload_config|json_script:"upload_config" }}
+<script>
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+          document.getElementById('spinner').classList.add('visually-hidden');
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+document.getElementById('id_file').onchange = function() {
+  var supported_format = JSON.parse(document.getElementById('upload_config').textContent)['supported_format'];
+  var file = this.files[0].name;
+  if (!supported_format.includes(file.split('.')[file.split('.').length - 1])) {
+    document.getElementById('id_file').value = "";
+    alert(JSON.parse(document.getElementById('upload_config').textContent)['unsupported_format_error']);    
+  }
+  else if (this.files[0].size > JSON.parse(document.getElementById('upload_config').textContent)['maximum_size']) {
+    document.getElementById('id_file').value = "";
+    alert(JSON.parse(document.getElementById('upload_config').textContent)['maximum_size_error']);    
+  }
+}
+
+function removeSpinner() {
+  document.getElementById('spinner').classList.remove('visually-hidden');
+}
+</script>
+{% endblock javascript %}
+

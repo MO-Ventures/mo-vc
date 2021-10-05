@@ -116,33 +116,33 @@
         </div>
         </a>
       </div>
-      {% comment %}
       <div class="row mt-5 g-4 g-xl-6">
         <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up">
-          <a href="" class="card h-100 border card-arrow">
+          <a href="/{% if LANGUAGE == "ko" %}ko/{% endif %}apply/partnership" class="card h-100 border card-arrow">
             <div class="card-body">
               <h4 class="card-title fw-light fs-4">
                 {% blocktrans %}
-                <span class="fw-bold">엠오벤처스</span>와 함께 일하고 싶어요
+                JOIN OUR <span class="fw-bold">JOURNEY</span>
                 {% endblocktrans %}
               </h4>
+              <h5 class="eyebrow text-muted">{% trans "Partner with us" %}</h5>
             </div>
           </a>
         </div>
         <div class="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-          <a href="" class="card card-arrow bg-primary inverted overflow-hidden">
+          <a href="/{% if LANGUAGE == "ko" %}ko/{% endif %}apply/investment" class="card card-arrow bg-primary inverted overflow-hidden">
             <div class="card-body">
               <h4 class="card-title fw-light fs-4">
                 {% blocktrans %}
-                <span class="fw-bold">투자</span>를 받고 싶어요
+                ACHIEVE <span class="fw-bold">BIGGER</span>
                 {% endblocktrans %}
               </h4>
+              <h5 class="eyebrow text-muted">{% trans "Apply for VC Funding" %}</h5>
             </div>
             <img class="position-absolute top-50 start-50 translate-middle level-3" src="{% static 'images/svg/dialog.svg' %}" alt="">
           </a>
         </div>
       </div>
-      {% endcomment %}
     </div>
 </div>
 </section>
