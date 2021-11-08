@@ -159,6 +159,7 @@ if not DEBUG:
     GS_BUCKET_NAME = config['google_cloud']['bucket_name']
     GS_PROJECT_ID = config['google_cloud']['project_id']
     GS_CREDENTIALS = service_account.Credentials.from_service_account_file(BASE_DIR / 'google_credentials.json')
+    GS_CUSTOM_ENDPOINT = 'https://cdn.mo-vc.com'
     GS_LOCATION = 'static'
     GS_DEFAULT_ACL = 'publicRead'
 
