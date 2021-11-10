@@ -149,3 +149,6 @@ google_credentials.json
 
 # Configuration
 config.yaml
+
+# Pycharm
+.idea
