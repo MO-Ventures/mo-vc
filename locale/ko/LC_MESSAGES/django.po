@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-08 17:02+0900\n"
+"POT-Creation-Date: 2021-11-16 19:59+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -511,11 +511,11 @@ msgstr ""
 "        연락해주셔서 감사합니다! 검토하고 빠른 시일 내에 연락드리겠습니다.\n"
 "        "
 
-#: apply/views.py:63
+#: apply/views.py:32
 msgid "File Not Supported"
 msgstr "지원하지 않는 파일 형식입니다"
 
-#: apply/views.py:65
+#: apply/views.py:34
 msgid "The file is too large. Must be less than 20mb"
 msgstr "파일이 너무 큽니다. 25mb 파일만 지원합니다."
 
@@ -531,7 +531,7 @@ msgstr "이메일"
 msgid "Phone"
 msgstr "번호"
 
-#: contact/templates/contact/index.html:47 templates/footer.html:14
+#: contact/templates/contact/index.html:47 templates/footer.html:15
 msgid "Seoul Office"
 msgstr "서울 사무소"
 
@@ -749,8 +749,8 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"    <meta name=\"Description\" content=\"엠오벤처스는 세계를 이끌 다음세대의 리더를 "
-"키우는 벤처캐피탈입니다.\">\n"
+"    <meta name=\"Description\" content=\"엠오벤처스는 세계를 이끌 다음세대의 "
+"리더를 키우는 벤처캐피탈입니다.\">\n"
 "    "
 
 #: templates/base.html:39
@@ -764,20 +764,22 @@ msgstr "본사"
 #: templates/footer.html:9
 msgid ""
 "\n"
-"        <h6>115, Gamcheonhang-ro 405beon-gil, Saha-gu, Busan, Republic of "
-"Korea</h6>\n"
+"        <h6>27, Jeonggwanjungang-ro, Jeonggwan-eup, Gijang-gun, Busan, "
+"Republic of Korea</h6>\n"
+"        <h6>Jeonggwan Zoom City 423-ho</h6>\n"
 "        "
 msgstr ""
 "\n"
-"        <h6>부산시 사하구 감천항로 405번길 115(구평동)</h6>\n"
+"        <h6>부산시 기장군 정관읍 정관중앙로 27</h5>\n"
+"        <h6>정관줌시티 423호</h6>\n"
 "        "
 
-#: templates/footer.html:15
+#: templates/footer.html:16
 msgid ""
 "\n"
 "        <h6>49, Gangnam-daero 37-gil, Seocho-gu, Seoul, Republic of Korea</"
 "h5>\n"
-"        <h6>Athenaeum Bulding 6fl</h6>\n"
+"        <h6>Athenaeum Building 6fl</h6>\n"
 "        "
 msgstr ""
 "\n"
@@ -785,10 +787,10 @@ msgstr ""
 "        <h6>애서니움 빌딩 6층</h6>\n"
 "        "
 
-#: templates/footer.html:30
+#: templates/footer.html:31
 msgid "MO Ventures Co., Ltd."
 msgstr "엠오벤처스 주식회사"
 
-#: templates/footer.html:33
+#: templates/footer.html:34
 msgid "Contact Us"
 msgstr "문의하기"
